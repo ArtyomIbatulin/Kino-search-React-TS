@@ -1,1 +1,1 @@
-import './Search.css';
+import styles from './Search.module.css';

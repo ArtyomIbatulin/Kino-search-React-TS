@@ -1,1 +1,1 @@
-import './Card.css';
+import styles from './Card.module.css';

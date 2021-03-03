@@ -1,1 +1,1 @@
-import './Filter.css';
+import styles from './Filter.module.css';
