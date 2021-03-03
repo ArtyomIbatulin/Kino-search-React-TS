@@ -1,1 +1,1 @@
-
+import './Search.css';
