@@ -1,0 +1,10 @@
+.h1 {
+  padding-left: 200px;
+  color: rgb(14, 132, 235);
+}
+
+.section {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

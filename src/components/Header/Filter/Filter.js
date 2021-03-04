@@ -6,7 +6,13 @@ const Filter = () => {
     <>
       <div className={styles.radio}>
         <label>
-          <input type='radio' id='all' name='radio' value='all' checked />
+          <input
+            type='radio'
+            id='all'
+            name='radio'
+            value='all'
+            defaultChecked
+          />
           Все
         </label>
         <label>

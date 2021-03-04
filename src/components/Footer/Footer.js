@@ -1,12 +1,8 @@
 import React from 'react';
-// import styles from './Footer.module.css';
+import styles from './Footer.module.css';
 
 const Footer = () => {
-  return (
-    <footer>
-      <h1>Footer</h1>
-    </footer>
-  );
+  return <footer className={styles.footer}>Kino Poisk 2021</footer>;
 };
 
 export default Footer;

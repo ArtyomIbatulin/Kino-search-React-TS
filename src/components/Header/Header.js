@@ -4,10 +4,8 @@ import Search from './Search/Search';
 import styles from './Header.module.css';
 
 const Header = () => {
-  console.log(styles);
-
   return (
-    <header>
+    <header className={styles.header}>
       <Filter />
       <Search />
     </header>
