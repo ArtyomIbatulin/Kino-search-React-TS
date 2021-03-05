@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Gallery from '../Gallery/Gallery';
-// import styles from './App.module.css';
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Gallery />
-      <Footer />
-    </>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      radioSelect: 'all',
+      searchText: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      radioSelect: event.target.value,
+    });
+    console.log(this.state.radioSelect);
+  }
+
+  render() {
+    return (
+      <>
+        <Header handleChange={this.handleChange} />
+        <Gallery />
+        <Footer />
+      </>
+    );
+  }
 }
-
-export default App;

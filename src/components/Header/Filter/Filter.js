@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './Filter.module.css';
+import { PropTypes } from 'prop-types';
 
-const Filter = () => {
+const Filter = (props) => {
   return (
     <>
       <div className={styles.radio}>
@@ -11,6 +12,7 @@ const Filter = () => {
             id='all'
             name='radio'
             value='all'
+            onChange={props.handleChange}
             defaultChecked
           />
           Все
@@ -21,24 +23,47 @@ const Filter = () => {
             id='action_movie'
             name='radio'
             value='action_movie'
+            onChange={props.handleChange}
           />
           Боевики
         </label>
         <label>
-          <input type='radio' id='comedy' name='radio' value='comedy' />
+          <input
+            type='radio'
+            id='comedy'
+            name='radio'
+            value='comedy'
+            onChange={props.handleChange}
+          />
           Комедии
         </label>
         <label>
-          <input type='radio' id='fantasy' name='radio' value='fantasy' />
+          <input
+            type='radio'
+            id='fantasy'
+            name='radio'
+            value='fantasy'
+            onChange={props.handleChange}
+          />
           Фантастика
         </label>
         <label>
-          <input type='radio' id='horror' name='radio' value='horror' />
+          <input
+            type='radio'
+            id='horror'
+            name='radio'
+            value='horror'
+            onChange={props.handleChange}
+          />
           Ужасы
         </label>
       </div>
     </>
   );
+};
+
+Filter.propTypes = {
+  handleChange: PropTypes.string.isRequired,
 };
 
 export default Filter;
