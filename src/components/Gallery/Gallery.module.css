@@ -1,10 +1,32 @@
 .h1 {
-  padding-left: 200px;
+  text-align: center;
   color: rgb(14, 132, 235);
 }
 
 .section {
-  margin: 0 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (max-width: 945px) {
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .section {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

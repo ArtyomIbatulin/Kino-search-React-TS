@@ -1,5 +1,10 @@
 .card {
-  width: 400px;
-  height: 200px;
   border: 1px solid black;
+  line-height: 0;
+}
+
+.card img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
