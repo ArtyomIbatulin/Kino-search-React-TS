@@ -8,7 +8,7 @@ const Gallery = (props) => {
   const isInputFocus = props.isInputFocus;
   const searchText = props.searchText;
 
-  const create = () => {
+  const createSearchingData = () => {
     return films.filter(
       (item) =>
         item.name.toLowerCase().slice(0, searchText.length) ===
@@ -34,7 +34,9 @@ const Gallery = (props) => {
     }
   };
 
-  const filteredData = isInputFocus ? create() : createfilteredData();
+  const filteredData = isInputFocus
+    ? createSearchingData()
+    : createfilteredData();
 
   return (
     <main>
