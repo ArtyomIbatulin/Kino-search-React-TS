@@ -147,7 +147,10 @@ export default class App extends Component {
     return (
       <>
         <Header handleRadioChange={this.handleRadioChange} />
-        <Gallery films={this.state.films} />
+        <Gallery
+          films={this.state.films}
+          radioSelect={this.state.radioSelect}
+        />
         <Footer />
       </>
     );

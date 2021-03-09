@@ -1,6 +1,7 @@
 .card {
   border: 1px solid black;
   line-height: 0;
+  list-style-type: none;
 }
 
 .card img {

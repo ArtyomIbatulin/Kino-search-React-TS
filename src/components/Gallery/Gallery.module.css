@@ -3,7 +3,7 @@
   color: rgb(14, 132, 235);
 }
 
-.section {
+.ul {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
@@ -14,19 +14,19 @@
 }
 
 @media (max-width: 945px) {
-  .section {
+  .ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 650px) {
-  .section {
+  .ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .section {
+  .ul {
     grid-template-columns: repeat(1, 1fr);
   }
 }
