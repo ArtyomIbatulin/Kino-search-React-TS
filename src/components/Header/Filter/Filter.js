@@ -11,7 +11,7 @@ const Filter = (props) => {
             id='all'
             name='radio'
             value='all'
-            onChange={props.handleChange}
+            onChange={props.handleRadioChange}
             defaultChecked
           />
           Все
@@ -22,7 +22,7 @@ const Filter = (props) => {
             id='action_movie'
             name='radio'
             value='action_movie'
-            onChange={props.handleChange}
+            onChange={props.handleRadioChange}
           />
           Боевики
         </label>
@@ -32,7 +32,7 @@ const Filter = (props) => {
             id='comedy'
             name='radio'
             value='comedy'
-            onChange={props.handleChange}
+            onChange={props.handleRadioChange}
           />
           Комедии
         </label>
@@ -42,7 +42,7 @@ const Filter = (props) => {
             id='fantasy'
             name='radio'
             value='fantasy'
-            onChange={props.handleChange}
+            onChange={props.handleRadioChange}
           />
           Фантастика
         </label>
@@ -52,7 +52,7 @@ const Filter = (props) => {
             id='horror'
             name='radio'
             value='horror'
-            onChange={props.handleChange}
+            onChange={props.handleRadioChange}
           />
           Ужасы
         </label>

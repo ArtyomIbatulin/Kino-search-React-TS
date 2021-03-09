@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 const Header = (props) => {
   return (
     <header className={styles.header}>
-      <Filter handleChange={props.handleChange} />
+      <Filter handleChange={props.handleRadioChange} />
       <Search />
     </header>
   );
