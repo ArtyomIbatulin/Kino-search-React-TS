@@ -10,15 +10,14 @@ export default class App extends Component {
       radioSelect: 'all',
       searchText: '',
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
       radioSelect: event.target.value,
     });
     console.log(this.state.radioSelect);
-  }
+  };
 
   render() {
     return (

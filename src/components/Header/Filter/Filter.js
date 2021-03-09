@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Filter.module.css';
-import { PropTypes } from 'prop-types';
 
 const Filter = (props) => {
   return (
@@ -60,10 +59,6 @@ const Filter = (props) => {
       </div>
     </>
   );
-};
-
-Filter.propTypes = {
-  handleChange: PropTypes.string.isRequired,
 };
 
 export default Filter;
