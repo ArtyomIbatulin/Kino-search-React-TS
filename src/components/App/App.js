@@ -75,6 +75,16 @@ export default class App extends Component {
         },
         {
           poster:
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsluuNaJ7Dph6BzzGritrRSE_5aF7365T30OIxKbo1gLIiilzx',
+          name: 'Звонок',
+          genre: 'Ужасы',
+          director: 'Гор Вербински',
+          // Телефонный звонок следует после просмотра некой загадочной видеокассеты, после чего каждый посмотревший ее умирает. Жертве дается лишь одна неделя, а дальше следует неминуемая смерть.
+          description: 'Описание',
+          stars: '5',
+        },
+        {
+          poster:
             'http://avatars.mds.yandex.net/get-kinopoisk-image/1599028/f1986ce1-138a-43d3-8142-0a69007879f8/600x900',
           name: 'Знакомство с родителями',
           genre: 'Комедии',
@@ -127,7 +137,7 @@ export default class App extends Component {
 
       radioSelect: 'all',
       searchText: '',
-      isInputFocus: 'false',
+      isInputFocus: false,
     };
   }
 
@@ -143,13 +153,34 @@ export default class App extends Component {
     });
   };
 
+  handleInputOnBlur = () => {
+    this.setState({
+      isInputFocus: false,
+    });
+    console.log(this.state.isInputFocus);
+  };
+
+  handleInputOnFocus = () => {
+    this.setState({
+      isInputFocus: true,
+    });
+    console.log(this.state.isInputFocus);
+  };
+
   render() {
     return (
       <>
-        <Header handleRadioChange={this.handleRadioChange} />
+        <Header
+          handleRadioChange={this.handleRadioChange}
+          handleInputChange={this.handleInputChange}
+          handleInputOnBlur={this.handleInputOnBlur}
+          handleInputOnFocus={this.handleInputOnFocus}
+        />
         <Gallery
           films={this.state.films}
           radioSelect={this.state.radioSelect}
+          isInputFocus={this.state.isInputFocus}
+          searchText={this.state.searchText}
         />
         <Footer />
       </>

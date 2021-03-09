@@ -7,7 +7,11 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <Filter handleRadioChange={props.handleRadioChange} />
-      <Search />
+      <Search
+        handleInputChange={props.handleInputChange}
+        handleInputOnBlur={props.handleInputOnBlur}
+        handleInputOnFocus={props.handleInputOnFocus}
+      />
     </header>
   );
 };

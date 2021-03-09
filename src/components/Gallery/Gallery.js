@@ -5,6 +5,16 @@ import styles from './Gallery.module.css';
 const Gallery = (props) => {
   const films = props.films;
   const radioSelect = props.radioSelect;
+  const isInputFocus = props.isInputFocus;
+  const searchText = props.searchText;
+
+  const create = () => {
+    return films.filter(
+      (item) =>
+        item.name.toLowerCase().slice(0, searchText.length) ===
+        searchText.toLowerCase()
+    );
+  };
 
   const createfilteredData = () => {
     if (radioSelect === 'all') {
@@ -24,7 +34,7 @@ const Gallery = (props) => {
     }
   };
 
-  const filteredData = createfilteredData();
+  const filteredData = isInputFocus ? create() : createfilteredData();
 
   return (
     <main>
