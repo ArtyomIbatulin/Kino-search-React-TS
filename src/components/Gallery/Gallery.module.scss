@@ -19,7 +19,9 @@
   }
 }
 
-@media (max-width: 650px) {
+$mobile: 650px;
+
+@media (max-width: $mobile) {
   .ul {
     grid-template-columns: repeat(2, 1fr);
   }
