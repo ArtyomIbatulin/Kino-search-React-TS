@@ -9,7 +9,7 @@ const Gallery = (props) => {
   const searchText = props.searchText;
 
   const createSearchingData = () => {
-    return films.filter(
+    return createfilteredData().filter(
       (item) =>
         item.name.toLowerCase().slice(0, searchText.length) ===
         searchText.toLowerCase()

@@ -143,10 +143,12 @@ export default class App extends Component {
     });
   };
 
-  handleInputOnBlur = () => {
+  handleInputOnBlur = (event) => {
     this.setState({
       isInputFocus: false,
+      searchText: '',
     });
+    event.target.value = '';
   };
 
   handleInputOnFocus = () => {
