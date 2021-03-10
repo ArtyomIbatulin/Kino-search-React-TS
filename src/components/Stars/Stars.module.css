@@ -12,7 +12,7 @@
 }
 
 .rating:not(:checked) > label {
-  /* float: right; */
+  float: right;
   width: 42px;
   padding: 0;
   cursor: pointer;

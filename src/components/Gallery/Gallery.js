@@ -53,6 +53,7 @@ const Gallery = (props) => {
                 name={item.name}
                 genre={item.genre}
                 director={item.director}
+                desc={item.desc}
                 description={item.description}
                 // stars={item.stars}
                 stars={<Stars handleStarsChange={props.handleStarsChange} />}

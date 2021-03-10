@@ -14,7 +14,8 @@ export default class App extends Component {
           name: 'Человек паук',
           genre: 'Фантастика',
           director: 'Сэм Рэйми',
-          // description='«Человек-паук 3: Враг в отражении» — третий и заключительный супергеройский фильм в трилогии Сэма Рэйми, основанной на комиксах о приключениях супергероя Человека-паука.'
+          desc:
+            '«Человек-паук 3: Враг в отражении» — третий и заключительный супергеройский фильм в трилогии Сэма Рэйми, основанной на комиксах о приключениях супергероя Человека-паука.',
           description: 'Описание',
           stars: '5',
         },
@@ -143,7 +144,6 @@ export default class App extends Component {
     this.setState({
       radioSelect: event.target.value,
     });
-    console.log(event.target.value);
   };
 
   handleInputChange = (event) => {
