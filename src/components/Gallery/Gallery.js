@@ -42,15 +42,12 @@ const Gallery = (props) => {
     <main>
       <section>
         <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
-      </section>
-      <section>
         <ul className={styles.ul}>
           {filteredData.map((item, i) => (
             <Card
               key={i}
               poster={item.poster}
               name={item.name}
-              q
               genre={item.genre}
               director={item.director}
               description={item.description}
