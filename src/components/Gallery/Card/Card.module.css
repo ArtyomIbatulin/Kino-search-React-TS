@@ -10,3 +10,11 @@
   object-position: center;
   object-fit: cover;
 }
+
+.desc {
+  cursor: pointer;
+}
+
+.desc:hover {
+  color: rgb(189, 73, 73);
+}
