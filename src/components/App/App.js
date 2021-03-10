@@ -128,13 +128,22 @@ export default class App extends Component {
       radioSelect: 'all',
       searchText: '',
       isInputFocus: false,
+      stars: '0',
     };
   }
+
+  handleStarsChange = (event) => {
+    this.setState({
+      stars: event.target.value,
+    });
+    console.log(event.target.value);
+  };
 
   handleRadioChange = (event) => {
     this.setState({
       radioSelect: event.target.value,
     });
+    console.log(event.target.value);
   };
 
   handleInputChange = (event) => {
@@ -171,6 +180,8 @@ export default class App extends Component {
           radioSelect={this.state.radioSelect}
           isInputFocus={this.state.isInputFocus}
           searchText={this.state.searchText}
+          handleStarsChange={this.handleStarsChange}
+          stars={this.state.stars}
         />
         <Footer />
       </>

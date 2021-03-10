@@ -1,12 +1,14 @@
 import React from 'react';
 import Card from './Card/Card';
 import styles from './Gallery.module.css';
+import Stars from '../Stars/Stars';
 
 const Gallery = (props) => {
   const films = props.films;
   const radioSelect = props.radioSelect;
   const isInputFocus = props.isInputFocus;
   const searchText = props.searchText;
+  // const stars = props.stars;
 
   const createSearchingData = () => {
     return createfilteredData().filter(
@@ -44,15 +46,18 @@ const Gallery = (props) => {
         <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
         <ul className={styles.ul}>
           {filteredData.map((item, i) => (
-            <Card
-              key={i}
-              poster={item.poster}
-              name={item.name}
-              genre={item.genre}
-              director={item.director}
-              description={item.description}
-              stars={item.stars}
-            />
+            <>
+              <Card
+                key={i}
+                poster={item.poster}
+                name={item.name}
+                genre={item.genre}
+                director={item.director}
+                description={item.description}
+                // stars={item.stars}
+                stars={<Stars handleStarsChange={props.handleStarsChange} />}
+              />
+            </>
           ))}
         </ul>
       </section>
