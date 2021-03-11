@@ -12,6 +12,7 @@ const Card = (props) => {
         {props.desc}
       </p>
       <p className={styles.desc}>{props.stars}</p>
+      <div className={styles.desc}>{props.rating}</div>
     </li>
   );
 };

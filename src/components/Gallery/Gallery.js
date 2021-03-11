@@ -9,7 +9,6 @@ const Gallery = (props) => {
   const radioSelect = props.radioSelect;
   const isInputFocus = props.isInputFocus;
   const searchText = props.searchText;
-  const rating = props.rating;
 
   const createSearchingData = () => {
     return createfilteredData().filter(
@@ -56,14 +55,17 @@ const Gallery = (props) => {
                 director={item.director}
                 desc={item.desc}
                 description={item.description}
-                stars={rating}
+                stars={item.stars}
                 // stars={<Stars handleStarsChange={props.handleStarsChange} />}
-              />
-              <StarRatingComponent
-                name='rate1'
-                starCount={5}
-                value={rating}
-                onStarClick={props.onStarClick}
+                rating={
+                  <StarRatingComponent
+                    key={i}
+                    name='rate'
+                    editing={false}
+                    starCount={5}
+                    value={item.stars}
+                  />
+                }
               />
             </>
           ))}
