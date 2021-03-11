@@ -1,14 +1,15 @@
 import React from 'react';
 import Card from './Card/Card';
 import styles from './Gallery.module.css';
-import Stars from '../Stars/Stars';
+// import Stars from '../Stars/Stars';
+import StarRatingComponent from 'react-star-rating-component';
 
 const Gallery = (props) => {
   const films = props.films;
   const radioSelect = props.radioSelect;
   const isInputFocus = props.isInputFocus;
   const searchText = props.searchText;
-  // const stars = props.stars;
+  const rating = props.rating;
 
   const createSearchingData = () => {
     return createfilteredData().filter(
@@ -55,8 +56,14 @@ const Gallery = (props) => {
                 director={item.director}
                 desc={item.desc}
                 description={item.description}
-                // stars={item.stars}
-                stars={<Stars handleStarsChange={props.handleStarsChange} />}
+                stars={rating}
+                // stars={<Stars handleStarsChange={props.handleStarsChange} />}
+              />
+              <StarRatingComponent
+                name='rate1'
+                starCount={5}
+                value={rating}
+                onStarClick={props.onStarClick}
               />
             </>
           ))}

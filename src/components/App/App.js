@@ -140,16 +140,9 @@ export default class App extends Component {
       radioSelect: 'all',
       searchText: '',
       isInputFocus: false,
-      stars: '0',
+      rating: 1,
     };
   }
-
-  handleStarsChange = (event) => {
-    this.setState({
-      stars: event.target.value,
-    });
-    console.log(event.target.value);
-  };
 
   handleRadioChange = (event) => {
     this.setState({
@@ -177,6 +170,11 @@ export default class App extends Component {
     });
   };
 
+  // onStarClick = (nextValue, prevValue, name) => {
+  onStarClick = (nextValue) => {
+    this.setState({ rating: nextValue });
+  };
+
   render() {
     return (
       <>
@@ -191,8 +189,8 @@ export default class App extends Component {
           radioSelect={this.state.radioSelect}
           isInputFocus={this.state.isInputFocus}
           searchText={this.state.searchText}
-          handleStarsChange={this.handleStarsChange}
-          stars={this.state.stars}
+          onStarClick={this.onStarClick}
+          rating={this.state.rating}
         />
         <Footer />
       </>
