@@ -35,7 +35,7 @@ const Gallery = (props) => {
   );
 
   return (
-    <main>
+    <main className={styles.main}>
       <section>
         <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
         <ul className={styles.ul}>
