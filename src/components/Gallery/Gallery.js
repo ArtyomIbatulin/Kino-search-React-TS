@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card/Card';
+import StarRatingComponent from 'react-star-rating-component';
 import styles from './Gallery.module.scss';
 
 const Gallery = (props) => {
@@ -48,6 +49,14 @@ const Gallery = (props) => {
               desc={item.desc}
               description={item.description}
               stars={item.stars}
+              rating={
+                <StarRatingComponent
+                  name='rate'
+                  editing={false}
+                  starCount={5}
+                  value={5}
+                />
+              }
             />
           ))}
         </ul>

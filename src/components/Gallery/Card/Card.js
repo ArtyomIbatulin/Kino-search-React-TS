@@ -12,6 +12,7 @@ const Card = (props) => {
         {props.description}
       </p>
       <p>{props.stars}</p>
+      <div>{props.rating}</div>
     </li>
   );
 };
