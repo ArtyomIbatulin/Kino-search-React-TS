@@ -11,12 +11,21 @@ export default class App extends Component {
         {
           poster:
             'https://upload.wikimedia.org/wikipedia/ru/7/7a/Spider-Man_3%2C_International_Poster.jpg',
+
           name: 'Человек паук',
           genre: 'Фантастика',
           director: 'Сэм Рэйми',
           desc:
             '«Человек-паук 3: Враг в отражении» — третий и заключительный супергеройский фильм в трилогии Сэма Рэйми, основанной на комиксах о приключениях супергероя Человека-паука.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kino-teatr.ru/kino/movie/hollywood/24102/annot/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 5,
           rating: '',
         },
@@ -27,7 +36,15 @@ export default class App extends Component {
           director: 'Питер Джексон',
           desc:
             'Кинотрилогия «Властели́н коле́ц» — снятая режиссёром Питером Джексоном серия из трёх связанных единым сюжетом кинофильмов, представляющая собой экранизацию романа Дж. Р. Р. Толкина «Властелин колец».',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kino-teatr.ru/kino/movie/hollywood/22276/annot/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 4,
           rating: '',
         },

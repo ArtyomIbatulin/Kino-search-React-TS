@@ -4,18 +4,26 @@
   list-style-type: none;
 }
 .divImg {
-  /* height: calc(462 / 308 * ((100vw - 100px) / 4));
+  height: calc(450 / 310 * ((100vw - 100px) / 4));
   background-color: rgb(189, 73, 73);
   display: flex;
-  align-items: center; */
+  align-items: center;
 }
 .img {
   width: 100%;
   object-position: center;
   object-fit: contain;
-  /* width: calc(100% - 15px);
+  width: calc(100% - 15px);
   padding: 6px;
-  text-align: center; */
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card a:visited {
+  color: rgb(189, 73, 73);
 }
 
 .card p,
