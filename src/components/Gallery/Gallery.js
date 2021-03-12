@@ -3,41 +3,35 @@ import Card from './Card/Card';
 import styles from './Gallery.module.scss';
 
 const Gallery = (props) => {
-  const { films, radioSelect } = props;
-  // const films = props.films;
-  // const radioSelect = props.radioSelect;
-  const isInputFocus = props.isInputFocus;
-  const searchText = props.searchText;
-
-  const createSearchingData = () => {
-    return createfilteredData().filter(
-      (item) =>
-        item.name.toLowerCase().slice(0, searchText.length) ===
-        searchText.toLowerCase()
-    );
-  };
+  const { films, radioSelect, searchText } = props;
 
   const createfilteredData = () => {
     if (radioSelect === 'all') {
       return films;
     }
+
     if (radioSelect === 'action_movie') {
       return films.filter((item) => item.genre === 'Боевики');
     }
+
     if (radioSelect === 'comedy') {
       return films.filter((item) => item.genre === 'Комедии');
     }
+
     if (radioSelect === 'fantasy') {
       return films.filter((item) => item.genre === 'Фантастика');
     }
+
     if (radioSelect === 'horror') {
       return films.filter((item) => item.genre === 'Ужасы');
     }
   };
 
-  const filteredData = isInputFocus
-    ? createSearchingData()
-    : createfilteredData();
+  const filteredData = createfilteredData().filter(
+    (item) =>
+      item.name.toLowerCase().slice(0, searchText.length) ===
+      searchText.toLowerCase()
+  );
 
   return (
     <main>

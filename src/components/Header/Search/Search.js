@@ -10,8 +10,6 @@ const Search = (props) => {
       name='search'
       placeholder='Search...'
       onChange={props.handleInputChange}
-      onBlur={props.handleInputOnBlur}
-      onFocus={props.handleInputOnFocus}
     />
   );
 };

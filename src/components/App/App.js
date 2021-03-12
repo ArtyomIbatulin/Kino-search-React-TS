@@ -139,7 +139,6 @@ export default class App extends Component {
 
       radioSelect: 'all',
       searchText: '',
-      isInputFocus: false,
     };
   }
 
@@ -155,33 +154,16 @@ export default class App extends Component {
     });
   };
 
-  handleInputOnBlur = (event) => {
-    this.setState({
-      isInputFocus: false,
-      searchText: '',
-    });
-    event.target.value = '';
-  };
-
-  handleInputOnFocus = () => {
-    this.setState({
-      isInputFocus: true,
-    });
-  };
-
   render() {
     return (
       <>
         <Header
           handleRadioChange={this.handleRadioChange}
           handleInputChange={this.handleInputChange}
-          handleInputOnBlur={this.handleInputOnBlur}
-          handleInputOnFocus={this.handleInputOnFocus}
         />
         <Gallery
           films={this.state.films}
           radioSelect={this.state.radioSelect}
-          isInputFocus={this.state.isInputFocus}
           searchText={this.state.searchText}
         />
         <Footer />

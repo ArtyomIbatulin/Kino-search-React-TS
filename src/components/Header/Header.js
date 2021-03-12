@@ -6,11 +6,7 @@ import styles from './Header.module.css';
 const Header = (props) => (
   <header className={styles.header}>
     <Filter handleRadioChange={props.handleRadioChange} />
-    <Search
-      handleInputChange={props.handleInputChange}
-      handleInputOnBlur={props.handleInputOnBlur}
-      handleInputOnFocus={props.handleInputOnFocus}
-    />
+    <Search handleInputChange={props.handleInputChange} />
   </header>
 );
 
