@@ -1,6 +1,8 @@
+@import '../../styles/variables.scss';
+
 .h1 {
   text-align: center;
-  color: rgb(14, 132, 235);
+  color: $secColor;
 }
 
 .ul {

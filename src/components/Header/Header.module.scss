@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(189, 73, 73);
-  color: azure;
+  background-color: $mainColor;
+  color: $azureColor;
   margin: 0 20px;
   margin-top: 20px;
   border-radius: 2px;
