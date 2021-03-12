@@ -10,8 +10,7 @@ export default class App extends Component {
       films: [
         {
           poster:
-            'https://upload.wikimedia.org/wikipedia/ru/7/7a/Spider-Man_3%2C_International_Poster.jpg',
-
+            'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/f283a934-88b0-4d04-8bf6-229979d613ea/220x330',
           name: 'Человек паук',
           genre: 'Фантастика',
           director: 'Сэм Рэйми',
@@ -19,7 +18,7 @@ export default class App extends Component {
             '«Человек-паук 3: Враг в отражении» — третий и заключительный супергеройский фильм в трилогии Сэма Рэйми, основанной на комиксах о приключениях супергероя Человека-паука.',
           description: (
             <a
-              href='https://www.kino-teatr.ru/kino/movie/hollywood/24102/annot/'
+              href='https://www.kinopoisk.ru/film/82441/'
               rel='noreferrer'
               target='_blank'
             >
@@ -30,7 +29,9 @@ export default class App extends Component {
           rating: '',
         },
         {
-          poster: 'https://www.kino-teatr.ru/movie/posters/big/6/22276.jpg',
+          // poster: 'https://www.kino-teatr.ru/movie/posters/big/6/22276.jpg',
+          poster:
+            'https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/62829e4f-868b-4f56-ae70-67fc37f47c28/220x330',
           name: 'Властелин колец',
           genre: 'Фантастика',
           director: 'Питер Джексон',
@@ -38,7 +39,7 @@ export default class App extends Component {
             'Кинотрилогия «Властели́н коле́ц» — снятая режиссёром Питером Джексоном серия из трёх связанных единым сюжетом кинофильмов, представляющая собой экранизацию романа Дж. Р. Р. Толкина «Властелин колец».',
           description: (
             <a
-              href='https://www.kino-teatr.ru/kino/movie/hollywood/22276/annot/'
+              href='https://www.kinopoisk.ru/film/328/'
               rel='noreferrer'
               target='_blank'
             >
@@ -49,13 +50,23 @@ export default class App extends Component {
           rating: '',
         },
         {
-          poster: 'https://cinemaseats.net/movies/wrong-turn/poster',
+          poster:
+            'https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/3001a87b-0c75-48ac-a2b4-df120b3316d0/220x330',
+
           name: 'Поворот не туда: Наследие',
           genre: 'Ужасы',
           director: 'Майк П. Нельсон',
           desc:
             'Компания друзей приезжает в Харперс-Ферри, чтобы отправиться в поход по Аппалачской тропе. В этих краях они сталкиваются с сообществом людей, которые жили в горах еще до Гражданской войны. И которые очень не любят незнакомцев.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 3,
           rating: '',
         },
@@ -66,7 +77,15 @@ export default class App extends Component {
           director: 'Йон Хервиц',
           desc:
             'Добрая американская традиция возвращается. Герои «Американского пирога» встречаются вновь спустя 10 лет. Они докажут, что даже время и расстояние не в силах разрушить их дружбу.Летом 1999-го четверо мичиганских парней решили расстаться с невинностью.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/506251/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 2,
           rating: '',
         },
@@ -77,7 +96,15 @@ export default class App extends Component {
           director: 'Джон Мактирнан',
           desc:
             '«Крепкий орешек» (англ. Die Hard) — американский боевик 1988 года. Снят режиссёром Джоном Мактирнаном по роману Родерика Торпа «Ничто не вечно (англ.)русск.».В 2017 году внесён в Национальный реестр фильмов.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 1,
           rating: '',
         },
@@ -88,7 +115,15 @@ export default class App extends Component {
           director: 'Чад Стахелски',
           desc:
             'Джон Уик — бывший наемный убийца — ведет размеренную жизнь, когда преступник крадет его любимый Mustang 1969 года и попутно убивает собаку Дейзи, единственное живое напоминание об умершей жене.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 5,
           rating: '',
         },
@@ -100,7 +135,15 @@ export default class App extends Component {
           director: 'Гор Вербински',
           desc:
             'Телефонный звонок следует после просмотра некой загадочной видеокассеты, после чего каждый посмотревший ее умирает. Жертве дается лишь одна неделя, а дальше следует неминуемая смерть.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 4,
           rating: '',
         },
@@ -112,7 +155,15 @@ export default class App extends Component {
           director: 'Джей Роуч',
           desc:
             '«Знакомство с родителями» — кинокомедия режиссёра Джея Роуча, премьера которой состоялась в 2000 году. Главные роли исполнили Роберт Де Ниро и Бен Стиллер. Успех фильма привёл к появлению двух сиквелов и номинации на премию «Оскар» за лучшую песню года.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 3,
           rating: '',
         },
@@ -124,7 +175,15 @@ export default class App extends Component {
           director: 'Крис Коламбус',
           desc:
             'Жизнь десятилетнего Гарри Поттера нельзя назвать сладкой: его родители умерли, едва ему исполнился год, а от дяди и тётки, взявших сироту на воспитание, достаются лишь тычки да подзатыльники.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 2,
           rating: '',
         },
@@ -136,7 +195,15 @@ export default class App extends Component {
           director: 'Питер Джексон',
           desc:
             'Фильм повествует о путешествии Бильбо Бэггинса, который пускается в грандиозный поход, целью которого является отвоевание утраченного королевства гномов Эребор у зловещего дракона Смауга.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 1,
           rating: '',
         },
@@ -148,19 +215,35 @@ export default class App extends Component {
           director: 'Джонатан Демми',
           desc:
             'Психопат похищает и убивает молодых женщин по всему Среднему Западу Америки. ФБР, уверенное в том, что все преступления совершены одним и тем же человеком, поручает агенту Клариссе Стерлинг встретиться с заключенным-маньяком, который мог бы объяснить следствию психологические мотивы серийного убийцы и тем самым вывести на его след.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 5,
           rating: '',
         },
         {
           poster:
-            'http://kinohod.ru/o/17/31/173172c7-1476-47ce-9588-ad69dcd4af42.jpg',
+            'https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/9f8e770b-8d50-42d1-b9b4-bbe58759f29f/220x330',
           name: 'Матрица',
           genre: 'Боевики',
           director: 'Лана Вачовски',
           desc:
             'Мир Матрицы — это иллюзия, существующая только в бесконечном сне обреченного человечества. Холодный мир будущего, в котором люди — всего лишь батарейки в компьютерных системах.',
-          description: 'Описание',
+          description: (
+            <a
+              href='https://www.kinopoisk.ru/film/1200179/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              Описание
+            </a>
+          ),
           stars: 4,
           rating: '',
         },

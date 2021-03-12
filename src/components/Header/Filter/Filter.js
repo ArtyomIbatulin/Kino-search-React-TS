@@ -6,7 +6,6 @@ const Filter = (props) => (
     <label>
       <input
         type='radio'
-        id='all'
         name='radio'
         value='all'
         onChange={props.handleRadioChange}
@@ -17,7 +16,6 @@ const Filter = (props) => (
     <label>
       <input
         type='radio'
-        id='action_movie'
         name='radio'
         value='action_movie'
         onChange={props.handleRadioChange}
@@ -27,7 +25,6 @@ const Filter = (props) => (
     <label>
       <input
         type='radio'
-        id='comedy'
         name='radio'
         value='comedy'
         onChange={props.handleRadioChange}
@@ -37,7 +34,6 @@ const Filter = (props) => (
     <label>
       <input
         type='radio'
-        id='fantasy'
         name='radio'
         value='fantasy'
         onChange={props.handleRadioChange}
@@ -47,7 +43,6 @@ const Filter = (props) => (
     <label>
       <input
         type='radio'
-        id='horror'
         name='radio'
         value='horror'
         onChange={props.handleRadioChange}

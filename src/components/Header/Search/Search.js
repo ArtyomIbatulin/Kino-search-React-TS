@@ -6,7 +6,6 @@ const Search = (props) => {
     <input
       className={styles.input}
       type='text'
-      id='search'
       name='search'
       placeholder='Search...'
       onChange={props.handleInputChange}
