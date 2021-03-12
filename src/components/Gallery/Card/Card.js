@@ -11,7 +11,6 @@ const Card = (props) => {
       <p className={styles.desc} title={props.desc}>
         {props.description}
       </p>
-      <p>{props.stars}</p>
       <div>{props.rating}</div>
     </li>
   );

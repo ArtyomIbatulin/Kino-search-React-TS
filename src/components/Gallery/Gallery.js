@@ -54,7 +54,7 @@ const Gallery = (props) => {
                   name='rate'
                   editing={false}
                   starCount={5}
-                  value={5}
+                  value={item.stars}
                 />
               }
             />
