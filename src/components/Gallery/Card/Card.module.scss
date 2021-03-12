@@ -6,7 +6,7 @@
   list-style-type: none;
 }
 .divImg {
-  height: calc(450 / 310 * ((100vw - 100px) / 4));
+  height: 450px;
   background-color: $mainColor;
   display: flex;
   align-items: center;
@@ -45,4 +45,27 @@
 .pDesc:hover,
 .card a:hover {
   color: $blackColor;
+}
+
+@media (max-width: 1339px) {
+  .divImg {
+    height: calc(450 / 310 * ((100vw - 100px) / 4));
+  }
+}
+
+@media (max-width: $tablet) {
+  .divImg {
+    height: calc(450 / 310 * ((100vw - 75px) / 3));
+  }
+}
+@media (max-width: $mobileL) {
+  .divImg {
+    height: calc(450 / 310 * ((100vw - 75px) / 2));
+  }
+}
+
+@media (max-width: $mobile) {
+  .divImg {
+    height: calc(450 / 310 * (100vw - 50px));
+  }
 }
