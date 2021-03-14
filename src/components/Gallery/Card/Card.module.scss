@@ -1,4 +1,4 @@
-@import '../../../styles/variables.scss';
+@import "../../../styles/variables.scss";
 
 .card {
   border: 1px solid $blackColor;
@@ -69,3 +69,6 @@
     height: calc(450 / 310 * (100vw - 50px));
   }
 }
+
+// отступ по высоте в карте, адаптив, на мобилах отлепить меню, по списку,
+// редакс, ссылки
