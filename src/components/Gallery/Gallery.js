@@ -1,30 +1,30 @@
-import React from 'react';
-import Card from './Card/Card';
-import StarRatingComponent from 'react-star-rating-component';
-import styles from './Gallery.module.scss';
+import React from "react";
+import Card from "./Card/Card";
+import StarRatingComponent from "react-star-rating-component";
+import styles from "./Gallery.module.scss";
 
 const Gallery = (props) => {
   const { films, radioSelect, searchText } = props;
 
   const createfilteredData = () => {
-    if (radioSelect === 'all') {
+    if (radioSelect === "all") {
       return films;
     }
 
-    if (radioSelect === 'action_movie') {
-      return films.filter((item) => item.genre === 'Боевики');
+    if (radioSelect === "action_movie") {
+      return films.filter((item) => item.genre === "Боевики");
     }
 
-    if (radioSelect === 'comedy') {
-      return films.filter((item) => item.genre === 'Комедии');
+    if (radioSelect === "comedy") {
+      return films.filter((item) => item.genre === "Комедии");
     }
 
-    if (radioSelect === 'fantasy') {
-      return films.filter((item) => item.genre === 'Фантастика');
+    if (radioSelect === "fantasy") {
+      return films.filter((item) => item.genre === "Фантастика");
     }
 
-    if (radioSelect === 'horror') {
-      return films.filter((item) => item.genre === 'Ужасы');
+    if (radioSelect === "horror") {
+      return films.filter((item) => item.genre === "Ужасы");
     }
   };
 
@@ -51,7 +51,7 @@ const Gallery = (props) => {
               stars={item.stars}
               rating={
                 <StarRatingComponent
-                  name='rate'
+                  name="rate"
                   editing={false}
                   starCount={5}
                   value={item.stars}
