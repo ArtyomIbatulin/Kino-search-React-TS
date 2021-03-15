@@ -7,7 +7,7 @@ const Card = (props) => {
   return (
     <li className={styles.card}>
       <div className={styles.divImg}>
-        <img src={poster} className={styles.img}></img>
+        <img src={poster} className={styles.img} />
       </div>
       <p className={styles.pName}>{name}</p>
       <p>{genre}</p>
