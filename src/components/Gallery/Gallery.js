@@ -1,37 +1,37 @@
-import React from "react";
-import Card from "./Card/Card";
-import StarRatingComponent from "react-star-rating-component";
-import styles from "./Gallery.module.scss";
+import React from 'react';
+import Card from './Card/Card';
+import StarRatingComponent from 'react-star-rating-component';
+import styles from './Gallery.module.scss';
 
 const Gallery = (props) => {
   const { films, radioSelect, searchText } = props;
 
   const createfilteredData = () => {
-    if (radioSelect === "all") {
-      return films;
+    let res;
+    switch (radioSelect) {
+      case 'all':
+        res = films;
+        break;
+      case 'action_movie':
+        res = films.filter((item) => item.genre === 'Боевики');
+        break;
+      case 'comedy':
+        res = films.filter((item) => item.genre === 'Комедии');
+        break;
+      case 'fantasy':
+        res = films.filter((item) => item.genre === 'Фантастика');
+        break;
+      case 'horror':
+        res = films.filter((item) => item.genre === 'Ужасы');
+        break;
     }
-
-    if (radioSelect === "action_movie") {
-      return films.filter((item) => item.genre === "Боевики");
-    }
-
-    if (radioSelect === "comedy") {
-      return films.filter((item) => item.genre === "Комедии");
-    }
-
-    if (radioSelect === "fantasy") {
-      return films.filter((item) => item.genre === "Фантастика");
-    }
-
-    if (radioSelect === "horror") {
-      return films.filter((item) => item.genre === "Ужасы");
-    }
+    return res;
   };
 
   const filteredData = createfilteredData().filter(
     (item) =>
-      item.name.toLowerCase().slice(0, searchText.length) ===
-      searchText.toLowerCase()
+      item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.director.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return (
@@ -51,7 +51,7 @@ const Gallery = (props) => {
               stars={item.stars}
               rating={
                 <StarRatingComponent
-                  name="rate"
+                  name='rate'
                   editing={false}
                   starCount={5}
                   value={item.stars}

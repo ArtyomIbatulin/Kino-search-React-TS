@@ -22,10 +22,16 @@
 
 .card a {
   text-decoration: none;
+  color: $mainColor;
+  cursor: pointer;
 }
 
 .card a:visited {
   color: $mainColor;
+}
+
+.card a:hover {
+  color: $blackColor;
 }
 
 .card p,
@@ -35,16 +41,6 @@
 
 .pName {
   font-weight: bold;
-}
-
-.pDesc {
-  cursor: pointer;
-  color: $mainColor;
-}
-
-.pDesc:hover,
-.card a:hover {
-  color: $blackColor;
 }
 
 @media (max-width: 1339px) {
