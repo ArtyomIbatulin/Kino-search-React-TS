@@ -2,10 +2,9 @@ import React from 'react';
 import Card from './Card/Card';
 import StarRatingComponent from 'react-star-rating-component';
 import styles from './Gallery.module.scss';
+import { connect } from 'react-redux';
 
-const Gallery = (props) => {
-  const { films, radioSelect, searchText } = props;
-
+const Gallery = ({ films, radioSelect, searchText }) => {
   const createfilteredData = () => {
     let res;
     switch (radioSelect) {
@@ -65,4 +64,12 @@ const Gallery = (props) => {
   );
 };
 
-export default Gallery;
+const mapStatetoProps = (state) => {
+  return {
+    films: state.films,
+    radioSelect: state.radioSelect,
+    searchText: state.searchText,
+  };
+};
+
+export default connect(mapStatetoProps, null)(Gallery);
