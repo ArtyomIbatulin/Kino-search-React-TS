@@ -14,12 +14,6 @@ export default class App extends Component {
     // };
   }
 
-  handleRadioChange = (event) => {
-    this.setState({
-      radioSelect: event.target.value,
-    });
-  };
-
   handleInputChange = (event) => {
     this.setState({
       searchText: event.target.value,
@@ -30,7 +24,7 @@ export default class App extends Component {
     return (
       <>
         <Header
-          handleRadioChange={this.handleRadioChange}
+          // handleRadioChange={this.handleRadioChange}
           handleInputChange={this.handleInputChange}
         />
         <Gallery

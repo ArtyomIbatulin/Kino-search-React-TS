@@ -1,14 +1,24 @@
 import React from 'react';
 import styles from './Filter.module.scss';
+import { connect } from 'react-redux';
+import { changeRadioSelect } from '../../../store/actions';
 
-const Filter = (props) => (
+const handleRadioChange = (event) => {
+  // this.setState({
+  //   radioSelect: event.target.value,
+  // });
+  changeRadioSelect(event);
+  console.log(event.target.value);
+};
+
+const Filter = () => (
   <div className={styles.radio}>
     <label>
       <input
         type='radio'
         name='radio'
         value='all'
-        onChange={props.handleRadioChange}
+        onChange={handleRadioChange}
         defaultChecked
       />
       Все
@@ -18,7 +28,7 @@ const Filter = (props) => (
         type='radio'
         name='radio'
         value='action_movie'
-        onChange={props.handleRadioChange}
+        onChange={handleRadioChange}
       />
       Боевики
     </label>
@@ -27,7 +37,7 @@ const Filter = (props) => (
         type='radio'
         name='radio'
         value='comedy'
-        onChange={props.handleRadioChange}
+        onChange={handleRadioChange}
       />
       Комедии
     </label>
@@ -36,7 +46,7 @@ const Filter = (props) => (
         type='radio'
         name='radio'
         value='fantasy'
-        onChange={props.handleRadioChange}
+        onChange={handleRadioChange}
       />
       Фантастика
     </label>
@@ -45,11 +55,15 @@ const Filter = (props) => (
         type='radio'
         name='radio'
         value='horror'
-        onChange={props.handleRadioChange}
+        onChange={handleRadioChange}
       />
       Ужасы
     </label>
   </div>
 );
 
-export default Filter;
+const mapDispatchToProps = {
+  changeRadioSelect,
+};
+
+export default connect(null, mapDispatchToProps)(Filter);
