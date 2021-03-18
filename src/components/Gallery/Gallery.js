@@ -50,7 +50,7 @@ const Gallery = ({ films, radioSelect, searchText }) => {
               stars={item.stars}
               rating={
                 <StarRatingComponent
-                  name='rate'
+                  name="rate"
                   editing={false}
                   starCount={5}
                   value={item.stars}
@@ -69,6 +69,7 @@ const mapStatetoProps = (state) => {
     films: state.films,
     radioSelect: state.radioSelect,
     searchText: state.searchText,
+    scroll: state.scroll,
   };
 };
 

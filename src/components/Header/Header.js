@@ -1,31 +1,70 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Filter from './Filter/Filter';
 import Search from './Search/Search';
 import styles from './Header.module.scss';
 import { connect } from 'react-redux';
 import { changeHeaderScroll } from '../../store/actions';
 
-const Header = ({ scroll, changeHeader }) => {
-  const checkCords = () => {
-    if (pageYOffset >= 1 && scroll === false) {
-      window.removeEventListener('scroll', checkCords);
-      changeHeader(true);
+class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  checkCords = () => {
+    console.log('checkCords');
+    if (pageYOffset >= 1 && this.props.scroll === false) {
+      // window.removeEventListener('scroll', this.checkCords);
+      this.props.changeHeader(true);
     }
-    if (pageYOffset < 1 && scroll === true) {
-      window.removeEventListener('scroll', checkCords);
-      changeHeader(false);
+    if (pageYOffset < 1 && this.props.scroll === true) {
+      // window.removeEventListener('scroll', this.checkCords);
+      this.props.changeHeader(false);
     }
   };
 
-  window.addEventListener('scroll', checkCords);
+  componentDidMount() {
+    window.addEventListener('scroll', this.checkCords);
+    console.log('did mount');
+  }
 
-  return (
-    <header className={scroll ? styles.headerScroll : styles.header}>
-      <Filter />
-      <Search />
-    </header>
-  );
-};
+  // componentWillUnmount() {
+  //   window.removeEventListener('scroll', this.checkCords);
+  //   console.log('will unmount');
+  // }
+
+  render() {
+    return (
+      <header
+        className={this.props.scroll ? styles.headerScroll : styles.header}
+      >
+        <Filter />
+        <Search />
+      </header>
+    );
+  }
+}
+
+// const Header = ({ scroll, changeHeader }) => {
+//   const checkCords = () => {
+//     if (pageYOffset >= 1 && scroll === false) {
+//       window.removeEventListener('scroll', checkCords);
+//       changeHeader(true);
+//     }
+//     if (pageYOffset < 1 && scroll === true) {
+//       window.removeEventListener('scroll', checkCords);
+//       changeHeader(false);
+//     }
+//   };
+
+//   window.addEventListener('scroll', checkCords);
+
+//   return (
+//     <header className={scroll ? styles.headerScroll : styles.header}>
+//       <Filter />
+//       <Search />
+//     </header>
+//   );
+// };
 
 const mapStatetoProps = (state) => {
   return {

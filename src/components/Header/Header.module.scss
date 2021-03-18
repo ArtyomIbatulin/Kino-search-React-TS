@@ -26,7 +26,8 @@
 }
 
 @media (max-width: 900px) {
-  .header .headerScroll {
+  .header,
+  .headerScroll {
     flex-direction: column;
   }
 }
