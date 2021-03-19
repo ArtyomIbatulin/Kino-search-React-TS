@@ -11,26 +11,21 @@ class Header extends Component {
   }
 
   checkCords = () => {
-    console.log('checkCords');
     if (pageYOffset >= 1 && this.props.scroll === false) {
-      // window.removeEventListener('scroll', this.checkCords);
       this.props.changeHeader(true);
     }
     if (pageYOffset < 1 && this.props.scroll === true) {
-      // window.removeEventListener('scroll', this.checkCords);
       this.props.changeHeader(false);
     }
   };
 
   componentDidMount() {
     window.addEventListener('scroll', this.checkCords);
-    console.log('did mount');
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.checkCords);
-  //   console.log('will unmount');
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.checkCords);
+  }
 
   render() {
     return (
