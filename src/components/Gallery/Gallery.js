@@ -5,37 +5,35 @@ import styles from './Gallery.module.scss';
 import { connect } from 'react-redux';
 import { filteredData } from '../../store/selectors';
 
-const Gallery = (filteredData) => {
-  return (
-    <main className={styles.main}>
-      <section>
-        <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
-        <ul className={styles.ul}>
-          {filteredData.filteredData.map((item, i) => (
-            <Card
-              key={i}
-              poster={item.poster}
-              name={item.name}
-              genre={item.genre}
-              director={item.director}
-              desc={item.desc}
-              description={item.description}
-              stars={item.stars}
-              rating={
-                <StarRatingComponent
-                  name="rate"
-                  editing={false}
-                  starCount={5}
-                  value={item.stars}
-                />
-              }
-            />
-          ))}
-        </ul>
-      </section>
-    </main>
-  );
-};
+const Gallery = (filteredData) => (
+  <main className={styles.main}>
+    <section>
+      <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
+      <ul className={styles.ul}>
+        {filteredData.filteredData.map((item, i) => (
+          <Card
+            key={i}
+            poster={item.poster}
+            name={item.name}
+            genre={item.genre}
+            director={item.director}
+            desc={item.desc}
+            description={item.description}
+            stars={item.stars}
+            rating={
+              <StarRatingComponent
+                name="rate"
+                editing={false}
+                starCount={5}
+                value={item.stars}
+              />
+            }
+          />
+        ))}
+      </ul>
+    </section>
+  </main>
+);
 
 const mapStatetoProps = (state) => {
   return {
