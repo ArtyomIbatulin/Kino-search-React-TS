@@ -9,6 +9,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './components/App/App.js';
 import SignIn from './pages/signIn/SignIn';
 import SignUp from './pages/signUp/SignUp';
+import CreateNewCard from './pages/createNewCard/CreateNewCard';
 
 const store = createStore(
   rootReducer,
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route exact path="/" component={App} />
           <Route path="/sign-in" component={SignIn} />
           <Route path="/sign-up" component={SignUp} />
+          <Route path="/create-new-card" component={CreateNewCard} />
         </Switch>
       </BrowserRouter>
     </Provider>
