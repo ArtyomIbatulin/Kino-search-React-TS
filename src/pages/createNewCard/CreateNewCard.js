@@ -2,8 +2,13 @@ import React from 'react';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import styles from './CreateNewCard.module.scss';
+// import { connect } from 'react-redux';
+import { changeFilmsArray } from '../../store/actions';
+import { useDispatch } from 'react-redux';
 
 const CreateNewCard = () => {
+  const dispatch = useDispatch();
+
   const MyTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
@@ -66,7 +71,8 @@ const CreateNewCard = () => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
-            console.log(JSON.stringify(values, null, 2));
+            console.log(values);
+            dispatch(changeFilmsArray(values));
             setSubmitting(false);
           }, 400);
         }}
@@ -94,4 +100,19 @@ const CreateNewCard = () => {
   );
 };
 
+// const mapDispatchToProps = (dispatch) => ({
+//   changeFilmsArray: (values) => dispatch(changeFilmsArray(values)),
+// });
+
+// export default connect(null, mapDispatchToProps)(CreateNewCard);
+
 export default CreateNewCard;
+// {
+//   "poster": "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/6137a4d9-3ec2-4a8d-8881-a45a6beab8be/800x800",
+//   "name": "Такси",
+//   "genre": "comedy",
+//   "director": "ЖП",
+//   "desc": "Молодой таксист Даниэль помешан на быстрой езде. Как ураган, проносится он по извилистым улицам Марселя на своём мощном ревущем звере «Пежо», пугая пассажиров и прохожих. Неподкупный полицейский Эмильен вынуждает его помочь в поимке банды грабителей, ускользающих от полиции на своих неуловимых «Мерседесах». И до самого конца не ясно, кто же сможет удержаться на крутом вираже.",
+//   "description": "https://www.kinopoisk.ru/film/14349/",
+//   "stars": 4
+// }
