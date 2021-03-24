@@ -2,7 +2,6 @@
 
 .createNewCard {
   text-align: center;
-  color: $mainColor;
 }
 
 .createNewCard input {
@@ -14,4 +13,8 @@
 .createNewCard button {
   display: block;
   margin: 10px auto;
+}
+
+.error {
+  color: red;
 }
