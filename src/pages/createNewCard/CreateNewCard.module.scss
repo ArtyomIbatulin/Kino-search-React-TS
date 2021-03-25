@@ -13,8 +13,14 @@
 .createNewCard button {
   display: block;
   margin: 10px auto;
+  margin-bottom: 110px;
 }
 
 .error {
   color: red;
+}
+
+.link {
+  text-decoration: none;
+  color: $mainColor;
 }

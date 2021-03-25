@@ -5,6 +5,7 @@ import styles from './CreateNewCard.module.scss';
 // import { connect } from 'react-redux';
 import { changeFilmsArray } from '../../store/actions';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const CreateNewCard = () => {
   const dispatch = useDispatch();
@@ -96,6 +97,9 @@ const CreateNewCard = () => {
           <button type="submit">Submit</button>
         </Form>
       </Formik>
+      <Link to="/" className={styles.link}>
+        Вернуться на главную
+      </Link>
     </main>
   );
 };
