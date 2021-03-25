@@ -13,16 +13,24 @@ export const filteredData = createSelector(
         res = films;
         break;
       case 'action_movie':
-        res = films.filter((item) => item.genre === 'Боевики');
+        res = films.filter(
+          (item) => item.genre === 'Боевики' || item.genre === 'action_movie'
+        );
         break;
       case 'comedy':
-        res = films.filter((item) => item.genre === 'Комедии');
+        res = films.filter(
+          (item) => item.genre === 'Комедии' || item.genre === 'comedy'
+        );
         break;
       case 'fantasy':
-        res = films.filter((item) => item.genre === 'Фантастика');
+        res = films.filter(
+          (item) => item.genre === 'Фантастика' || item.genre === 'fantasy'
+        );
         break;
       case 'horror':
-        res = films.filter((item) => item.genre === 'Ужасы');
+        res = films.filter(
+          (item) => item.genre === 'Ужасы' || item.genre === 'horror'
+        );
         break;
     }
 

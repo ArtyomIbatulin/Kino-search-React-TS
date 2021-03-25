@@ -13,7 +13,14 @@ const Card = (props) => {
       <p>{genre}</p>
       <p>{director}</p>
       <p className={styles.pDesc} title={desc}>
-        {description}
+        {/* {description} */}
+        <a
+          href={description.href}
+          rel={description.rel}
+          target={description.target}
+        >
+          Описание
+        </a>
       </p>
       <div className={styles.rating}>{rating}</div>
     </li>
