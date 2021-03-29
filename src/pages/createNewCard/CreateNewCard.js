@@ -5,6 +5,7 @@ import { changeFilmsArray } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ChakraInpit from './chakraInput/ChakraInpit';
+import { theme, ThemeProvider } from '@chakra-ui/react';
 import MySelect from './MySelect';
 import validation from './validation';
 
@@ -25,38 +26,40 @@ const CreateNewCard = () => {
   return (
     <main className={styles.createNewCard}>
       <h1 className={styles.h1}>Заполните карту!</h1>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validation}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          dispatch(changeFilmsArray([...films, values]));
-          setSubmitting(false);
-          resetForm();
-          alert('Карта создана');
-        }}
-      >
-        <Form>
-          <ChakraInpit label="Постер" name="poster" type="text" />
-          <ChakraInpit label="Название" name="name" type="text" />
-          <ChakraInpit label="Режиссер" name="director" type="text" />
-          <ChakraInpit label="Описание" name="desc" type="text" />
-          <ChakraInpit label="Ссылка на фильм" name="description" />
-          <ChakraInpit label="Рейтинг" name="stars" type="number" />
+      <ThemeProvider theme={theme}>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validation}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            dispatch(changeFilmsArray([...films, values]));
+            setSubmitting(false);
+            resetForm();
+            alert('Карта создана');
+          }}
+        >
+          <Form>
+            <ChakraInpit label="Постер" name="poster" type="text" />
+            <ChakraInpit label="Название" name="name" type="text" />
+            <ChakraInpit label="Режиссер" name="director" type="text" />
+            <ChakraInpit label="Описание" name="desc" type="text" />
+            <ChakraInpit label="Ссылка на фильм" name="description" />
+            <ChakraInpit label="Рейтинг" name="stars" type="number" />
 
-          <MySelect className={styles.select} name="genre">
-            <option value="">Выберите жанр фильма</option>
-            <option value="Боевики">Боевики</option>
-            <option value="Комедии">Комедии</option>
-            <option value="Фантастика">Фантастика</option>
-            <option value="Ужасы">Ужасы</option>
-          </MySelect>
+            <MySelect className={styles.select} name="genre">
+              <option value="">Выберите жанр фильма</option>
+              <option value="Боевики">Боевики</option>
+              <option value="Комедии">Комедии</option>
+              <option value="Фантастика">Фантастика</option>
+              <option value="Ужасы">Ужасы</option>
+            </MySelect>
 
-          <div className={styles.btns}>
-            <button type="submit">Создать карту</button>
-            <button type="reset">Очистить</button>
-          </div>
-        </Form>
-      </Formik>
+            <div className={styles.btns}>
+              <button type="submit">Создать карту</button>
+              <button type="reset">Очистить</button>
+            </div>
+          </Form>
+        </Formik>
+      </ThemeProvider>
       <Link to="/" className={styles.link}>
         Вернуться на главную
       </Link>
