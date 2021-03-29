@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Card.module.scss';
 
 const Card = (props) => {
-  const { poster, name, genre, director, desc, description, rating } = props;
+  const { poster, name, genre, director, desc, description } = props;
 
   return (
     <li className={styles.card}>
@@ -18,7 +18,7 @@ const Card = (props) => {
           Описание
         </a>
       </p>
-      <div className={styles.rating}>{rating}</div>
+      <div className={styles.rating}>{props.children}</div>
     </li>
   );
 };
