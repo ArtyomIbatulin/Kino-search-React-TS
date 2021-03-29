@@ -23,7 +23,4 @@ function ChakraInpit(props) {
     </Field>
   );
 }
-
-// form.errors[description.href]
-
 export default ChakraInpit;

@@ -1,7 +1,6 @@
 import {
   CHANGE_RADIO_SELECT,
   CHANGE_INPUT_SEARCH,
-  // CHANGE_HEADER_SCROLL,
   CHANGE_FILMS_ARRAY,
 } from './types';
 
@@ -18,13 +17,6 @@ export function changeInputSearch(searchText) {
     payload: searchText,
   };
 }
-
-// export function changeHeaderScroll(scroll) {
-//   return {
-//     type: CHANGE_HEADER_SCROLL,
-//     payload: scroll,
-//   };
-// }
 
 export function changeFilmsArray(films) {
   return {
