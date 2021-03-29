@@ -1,68 +1,68 @@
-@import '../../styles/variables.scss';
+// @import '../../styles/variables.scss';
 
-.createNewCard {
-  text-align: center;
-  max-width: 50%;
-  background-color: #eee;
-  margin: 20px auto;
-  border: 1px solid black;
-  box-shadow: 5px 5px black;
-  padding-bottom: 40px;
-}
+// .createNewCard {
+//   text-align: center;
+//   max-width: 50%;
+//   background-color: #eee;
+//   margin: 20px auto;
+//   border: 1px solid black;
+//   box-shadow: 5px 5px black;
+//   padding-bottom: 40px;
+// }
 
-.createNewCard input {
-  display: block;
-  margin: 10px auto;
-  margin-bottom: 0;
-  padding: 10px;
-}
+// .createNewCard input {
+//   display: block;
+//   margin: 10px auto;
+//   margin-bottom: 0;
+//   padding: 10px;
+// }
 
-.formControl {
-  margin-bottom: 35px;
-}
+// .formControl {
+//   margin-bottom: 35px;
+// }
 
-.createNewCard button {
-  display: block;
-  padding: 15px;
-  background-color: $mainColor;
-  cursor: pointer;
-  color: azure;
-  margin-top: 35px;
-  margin-bottom: 40px;
-  margin-right: 9px;
-}
+// .createNewCard button {
+//   display: block;
+//   padding: 15px;
+//   background-color: $mainColor;
+//   cursor: pointer;
+//   color: azure;
+//   margin-top: 35px;
+//   margin-bottom: 40px;
+//   margin-right: 9px;
+// }
 
-.btns {
-  display: flex;
-  justify-content: center;
-}
+// .btns {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.select {
-  padding: 5px 10px;
-}
+// .select {
+//   padding: 5px 10px;
+// }
 
-.createNewCard button:hover {
-  background-color: rgb(151, 3, 3);
-}
+// .createNewCard button:hover {
+//   background-color: rgb(151, 3, 3);
+// }
 
-.error {
-  color: red;
-}
+// .error {
+//   color: red;
+// }
 
-.link {
-  text-decoration: none;
-  color: $mainColor;
-}
+// .link {
+//   text-decoration: none;
+//   color: $mainColor;
+// }
 
-.link:hover {
-  color: rgb(151, 3, 3);
-}
+// .link:hover {
+//   color: rgb(151, 3, 3);
+// }
 
-@media (max-width: $mobileL) {
-  .createNewCard {
-    max-width: 95%;
-    margin: 10px auto;
-    box-shadow: 2px 2px black;
-    padding-bottom: 40px;
-  }
-}
+// @media (max-width: $mobileL) {
+//   .createNewCard {
+//     max-width: 95%;
+//     margin: 10px auto;
+//     box-shadow: 2px 2px black;
+//     padding-bottom: 40px;
+//   }
+// }

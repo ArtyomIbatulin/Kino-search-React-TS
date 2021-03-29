@@ -4,7 +4,7 @@ import styles from './CreateNewCard.module.scss';
 import { changeFilmsArray } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import MyTextInput from './MyTextInput';
+import ChakraInpit from './chakraInput/ChakraInpit';
 import MySelect from './MySelect';
 import validation from './validation';
 
@@ -36,12 +36,12 @@ const CreateNewCard = () => {
         }}
       >
         <Form>
-          <MyTextInput label="Постер" name="poster" type="text" />
-          <MyTextInput label="Название" name="name" type="text" />
-          <MyTextInput label="Режиссер" name="director" type="text" />
-          <MyTextInput label="Описание" name="desc" type="text" />
-          <MyTextInput label="Ссылка на фильм" name="description" />
-          <MyTextInput label="Рейтинг" name="stars" type="number" />
+          <ChakraInpit label="Постер" name="poster" type="text" />
+          <ChakraInpit label="Название" name="name" type="text" />
+          <ChakraInpit label="Режиссер" name="director" type="text" />
+          <ChakraInpit label="Описание" name="desc" type="text" />
+          <ChakraInpit label="Ссылка на фильм" name="description" />
+          <ChakraInpit label="Рейтинг" name="stars" type="number" />
 
           <MySelect className={styles.select} name="genre">
             <option value="">Выберите жанр фильма</option>
