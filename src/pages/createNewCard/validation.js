@@ -17,15 +17,10 @@ const validation = Yup.object({
     .max(20, 'Не более 20 символов')
     .required('Обязательное поле'),
   desc: Yup.string().trim().required('Обязательное поле'),
-  description: Yup.object().shape({
-    href: Yup.string()
-      .trim()
-      .url('Некорректный URL')
-      .required('Обязательное поле'),
-    rel: Yup.string(),
-    target: Yup.string(),
-    children: Yup.string(),
-  }),
+  description: Yup.string()
+    .trim()
+    .url('Некорректный URL')
+    .required('Обязательное поле'),
   stars: Yup.number().required('Обязательное поле').max(5),
 });
 

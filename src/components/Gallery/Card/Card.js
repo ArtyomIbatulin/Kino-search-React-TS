@@ -13,8 +13,7 @@ const Card = (props) => {
       <p>{genre}</p>
       <p>{director}</p>
       <p className={styles.pDesc} title={desc}>
-        {/* {description} */}
-        <a href={description.href} rel="noreferrer" target={description.target}>
+        <a href={description} rel="noreferrer" target="_blank">
           Описание
         </a>
       </p>

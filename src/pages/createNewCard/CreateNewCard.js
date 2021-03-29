@@ -14,12 +14,7 @@ const initialValues = {
   genre: '',
   director: '',
   desc: '',
-  description: {
-    href: '',
-    rel: 'noreferrer',
-    target: '_blank',
-    children: 'Описание',
-  },
+  description: '',
   stars: '',
 };
 
@@ -33,10 +28,10 @@ const CreateNewCard = () => {
       <Formik
         initialValues={initialValues}
         validationSchema={validation}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
           dispatch(changeFilmsArray([...films, values]));
           setSubmitting(false);
-          // resetForm();
+          resetForm();
           alert('Карта создана');
         }}
       >
@@ -45,7 +40,7 @@ const CreateNewCard = () => {
           <MyTextInput label="Название" name="name" type="text" />
           <MyTextInput label="Режиссер" name="director" type="text" />
           <MyTextInput label="Описание" name="desc" type="text" />
-          <MyTextInput label="Ссылка на фильм" name="description.href" />
+          <MyTextInput label="Ссылка на фильм" name="description" />
           <MyTextInput label="Рейтинг" name="stars" type="number" />
 
           <MySelect className={styles.select} name="genre">
