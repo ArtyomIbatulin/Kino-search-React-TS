@@ -4,8 +4,8 @@ import styles from './CreateNewCard.module.scss';
 import { changeFilmsArray } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import MyTextInput from './MyTextInput';
-import MySelect from './MySelect';
+import MyTextInput from './components/myTextInput/MyTextInput';
+import MySelect from './components/mySelect/MySelect';
 import validation from './validation';
 
 const initialValues = {
