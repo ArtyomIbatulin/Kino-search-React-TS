@@ -1,6 +1,9 @@
-import { CHANGE_RADIO_SELECT, CHANGE_INPUT_SEARCH } from './types';
-import { CHANGE_HEADER_SCROLL } from './types';
-import { CHANGE_FILMS_ARRAY } from './types';
+import {
+  CHANGE_RADIO_SELECT,
+  CHANGE_INPUT_SEARCH,
+  // CHANGE_HEADER_SCROLL,
+  CHANGE_FILMS_ARRAY,
+} from './types';
 
 export function changeRadioSelect(radioSelect) {
   return {
@@ -16,12 +19,12 @@ export function changeInputSearch(searchText) {
   };
 }
 
-export function changeHeaderScroll(scroll) {
-  return {
-    type: CHANGE_HEADER_SCROLL,
-    payload: scroll,
-  };
-}
+// export function changeHeaderScroll(scroll) {
+//   return {
+//     type: CHANGE_HEADER_SCROLL,
+//     payload: scroll,
+//   };
+// }
 
 export function changeFilmsArray(films) {
   return {

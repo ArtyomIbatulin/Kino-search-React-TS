@@ -1,92 +1,38 @@
 import React from 'react';
-import { Formik, Form, useField } from 'formik';
-import * as Yup from 'yup';
+import { Formik, Form } from 'formik';
 import styles from './CreateNewCard.module.scss';
 import { changeFilmsArray } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import MyTextInput from './MyTextInput';
+import MySelect from './MySelect';
+import validation from './validation';
+
+const initialValues = {
+  poster: '',
+  name: '',
+  genre: '',
+  director: '',
+  desc: '',
+  description: {
+    href: '',
+    rel: 'noreferrer',
+    target: '_blank',
+    children: 'Описание',
+  },
+  stars: '',
+};
 
 const CreateNewCard = () => {
   const dispatch = useDispatch();
   const films = useSelector((state) => state.films);
 
-  const MyTextInput = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-
-    return (
-      <div className={styles.formControl}>
-        <label htmlFor={props.id || props.name}>{label}</label>
-        <input {...field} {...props} />
-        {meta.touched && meta.error ? (
-          <div className={styles.error}>{meta.error}</div>
-        ) : null}
-      </div>
-    );
-  };
-
-  const MySelect = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-
-    return (
-      <>
-        <label htmlFor={props.id || props.name}>{label}</label>
-        <select {...field} {...props} />
-        {meta.touched && meta.error ? (
-          <div className={styles.error}>{meta.error}</div>
-        ) : null}
-      </>
-    );
-  };
-
   return (
     <main className={styles.createNewCard}>
       <h1 className={styles.h1}>Заполните карту!</h1>
       <Formik
-        initialValues={{
-          poster: '',
-          name: '',
-          genre: '',
-          director: '',
-          desc: '',
-          description: {
-            href: '',
-            rel: 'noreferrer',
-            target: '_blank',
-            children: 'Описание',
-          },
-          stars: '',
-        }}
-        validationSchema={Yup.object({
-          poster: Yup.string()
-            .trim()
-            .url('Некорректный URL')
-            .required('Обязательное поле'),
-          name: Yup.string()
-            .trim()
-            .max(20, 'Не более 20 символов')
-            .required('Обязательное поле'),
-          genre: Yup.string()
-            .oneOf(
-              ['Боевики', 'Комедии', 'Фантастика', 'Ужасы'],
-              'Неправильный жанр'
-            )
-            .required('Обязательное поле'),
-          director: Yup.string()
-            .trim()
-            .max(20, 'Не более 20 символов')
-            .required('Обязательное поле'),
-          desc: Yup.string().trim().required('Обязательное поле'),
-          description: Yup.object().shape({
-            href: Yup.string()
-              .trim()
-              .url('Некорректный URL')
-              .required('Обязательное поле'),
-            rel: Yup.string(),
-            target: Yup.string(),
-            children: Yup.string(),
-          }),
-          stars: Yup.number().required('Обязательное поле').max(5),
-        })}
+        initialValues={initialValues}
+        validationSchema={validation}
         onSubmit={(values, { setSubmitting }) => {
           dispatch(changeFilmsArray([...films, values]));
           setSubmitting(false);
