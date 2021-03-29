@@ -1,5 +1,4 @@
-import { CHANGE_RADIO_SELECT } from './types';
-import { CHANGE_INPUT_SEARCH } from './types';
+import { CHANGE_RADIO_SELECT, CHANGE_INPUT_SEARCH } from './types';
 import { CHANGE_HEADER_SCROLL } from './types';
 import { CHANGE_FILMS_ARRAY } from './types';
 

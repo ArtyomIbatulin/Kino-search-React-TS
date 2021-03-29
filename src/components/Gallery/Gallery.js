@@ -5,14 +5,15 @@ import styles from './Gallery.module.scss';
 import { connect } from 'react-redux';
 import { filteredData } from '../../store/selectors';
 
-const Gallery = (filteredData) => (
+const Gallery = (props) => (
   <main className={styles.main}>
     <section>
       <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
       <ul className={styles.ul}>
-        {filteredData.filteredData.map((item, i) => (
+        {props.filteredData.map((item, i) => (
           <Card
             key={i}
+            item={item}
             poster={item.poster}
             name={item.name}
             genre={item.genre}
@@ -20,15 +21,14 @@ const Gallery = (filteredData) => (
             desc={item.desc}
             description={item.description}
             stars={item.stars}
-            rating={
-              <StarRatingComponent
-                name="rate"
-                editing={false}
-                starCount={5}
-                value={item.stars}
-              />
-            }
-          />
+          >
+            <StarRatingComponent
+              name="rate"
+              editing={false}
+              starCount={5}
+              value={item.stars}
+            />
+          </Card>
         ))}
       </ul>
     </section>
