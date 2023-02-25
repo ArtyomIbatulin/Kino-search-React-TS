@@ -5,13 +5,30 @@ import {
   CHANGE_FILMS_ARRAY,
 } from './types';
 
-const initialState = {
+type FilmsType = {
+  poster: string,
+  name:  string,
+  genre:  string,
+  director: string,
+  desc:  string,
+  description:  string,
+  stars: number,
+  rating:  string,
+}
+
+type InitialStateType = {
+  films: Array<FilmsType>,
+  radioSelect: string,
+  searchText: string,
+}
+
+const initialState: InitialStateType = {
   films: films,
   radioSelect: 'all',
   searchText: '',
 };
 
-export const rootReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action: any):InitialStateType => {
   switch (action.type) {
     case CHANGE_RADIO_SELECT:
       return { ...state, radioSelect: action.payload };
