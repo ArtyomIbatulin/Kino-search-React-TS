@@ -5,7 +5,7 @@ import {
   CHANGE_FILMS_ARRAY,
 } from './types';
 
-type FilmsType = {
+export type FilmsType = {
   poster: string,
   name:  string,
   genre:  string,
@@ -16,7 +16,7 @@ type FilmsType = {
   rating:  string,
 }
 
-type InitialStateType = {
+export type InitialStateType = {
   films: Array<FilmsType>,
   radioSelect: string,
   searchText: string,
