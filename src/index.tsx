@@ -4,7 +4,7 @@ import './styles/index.scss';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { rootReducer } from './store/redusers';
+import { rootReducer } from './store/reducers';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './components/App/App.js';
 import SignIn from './pages/signIn/SignIn';

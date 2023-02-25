@@ -6,20 +6,20 @@ import {
 } from './types';
 
 export type FilmsType = {
-  poster: string,
-  name:  string,
-  genre:  string,
-  director: string,
-  desc:  string,
-  description:  string,
-  stars: number,
-  rating:  string,
+  poster: string | null,
+  name:  string | null,
+  genre:  string | null,
+  director: string | null,
+  desc:  string | null,
+  description: string | null,
+  stars: number | null,
+  rating:  string | null,
 }
 
 export type InitialStateType = {
-  films: Array<FilmsType>,
-  radioSelect: string,
-  searchText: string,
+  films: Array<FilmsType> | null,
+  radioSelect: string | null,
+  searchText: string | null,
 }
 
 const initialState: InitialStateType = {
