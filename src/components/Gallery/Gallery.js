@@ -1,9 +1,8 @@
-import React from 'react';
-import Card from './Card/Card';
-import StarRatingComponent from 'react-star-rating-component';
-import styles from './Gallery.module.scss';
-import { connect } from 'react-redux';
-import { filteredData } from '../../store/selectors';
+import React from "react";
+import Card from "./Card/Card";
+import styles from "./Gallery.module.scss";
+import { connect } from "react-redux";
+import { filteredData } from "../../store/selectors";
 
 const Gallery = (props) => (
   <main className={styles.main}>
@@ -22,12 +21,12 @@ const Gallery = (props) => (
             description={item.description}
             stars={item.stars}
           >
-            <StarRatingComponent
+            {/* <StarRatingComponent
               name="rate"
               editing={false}
               starCount={5}
               value={item.stars}
-            />
+            /> */}
           </Card>
         ))}
       </ul>

@@ -18,8 +18,8 @@ export type FilmsType = {
 
 export type InitialStateType = {
   films: Array<FilmsType> | null,
-  radioSelect: string | null,
-  searchText: string | null,
+  radioSelect: string ,
+  searchText: string ,
 }
 
 const initialState: InitialStateType = {
