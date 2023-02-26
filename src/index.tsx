@@ -10,10 +10,11 @@ import App from './components/App/App.js';
 import SignIn from './pages/signIn/SignIn';
 import SignUp from './pages/signUp/SignUp';
 import CreateNewCard from './pages/createNewCard/CreateNewCard';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(
   rootReducer,
- // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools()
 );
 
 ReactDOM.render(
