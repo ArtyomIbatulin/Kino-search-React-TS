@@ -17,6 +17,9 @@ const store = createStore(
   composeWithDevTools()
 );
 
+type RootReducerType = typeof rootReducer;
+export type AppStateType = ReturnType<RootReducerType>
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

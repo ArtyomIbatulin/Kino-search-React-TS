@@ -1,11 +1,27 @@
-import React from "react";
+import React, {FC} from "react";
 import Card from "./Card/Card";
 import styles from "./Gallery.module.scss";
 import { connect } from "react-redux";
 import { filteredData } from "../../store/selectors";
 import StarRatingComponent from "react-star-rating-component";
+import { AppStateType } from "../../index";
+import { boolean, number } from "yup";
 
-const Gallery = (props) => (
+export type CardType = {
+  poster : string,
+  name : string,
+  genre : string,
+  director : string,
+  desc: string,
+  description: string,
+  stars : number
+}
+
+type PropsType = {
+  filteredData : Array<CardType>
+}
+
+const Gallery: FC<PropsType>  = (props) => (
   <main className={styles.main}>
     <section>
       <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
@@ -35,7 +51,7 @@ const Gallery = (props) => (
   </main>
 );
 
-const mapStatetoProps = (state) => {
+const mapStatetoProps = (state: AppStateType) => {
   return {
     filteredData: filteredData(state),
   };

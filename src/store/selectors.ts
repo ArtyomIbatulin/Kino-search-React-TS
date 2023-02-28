@@ -1,8 +1,9 @@
 import { createSelector } from 'reselect';
+import {AppStateType} from '../index'
 
-const getFilms = (state) => state.films;
-const getradioSelect = (state) => state.radioSelect;
-const getSearchText = (state) => state.searchText;
+const getFilms = (state: AppStateType) => state.films;
+const getradioSelect = (state: AppStateType) => state.radioSelect;
+const getSearchText = (state: AppStateType) => state.searchText;
 
 export const filteredData = createSelector(
   [getFilms, getradioSelect, getSearchText],

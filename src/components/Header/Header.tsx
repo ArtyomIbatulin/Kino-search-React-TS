@@ -3,8 +3,16 @@ import Filter from './Filter/Filter';
 import Search from './Search/Search';
 import styles from './Header.module.scss';
 
-class Header extends Component {
-  constructor(props) {
+type PropsType = {
+  checkCords: () => void
+}
+
+type StateType = {
+  scroll: boolean
+}
+
+class Header extends Component<PropsType, StateType> {
+  constructor(props: PropsType) {
     super(props);
     this.state = {
       scroll: false,
