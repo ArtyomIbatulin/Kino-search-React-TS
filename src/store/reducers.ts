@@ -1,9 +1,12 @@
 import { films } from '../components/App/db';
+
 import {
   CHANGE_RADIO_SELECT,
   CHANGE_INPUT_SEARCH,
   CHANGE_FILMS_ARRAY,
 } from './types';
+
+import {ActionsTypes} from './actions'
 
 export type FilmsType = {
   poster: string | null,
@@ -28,7 +31,7 @@ const initialState: InitialStateType = {
   searchText: '',
 };
 
-export const rootReducer = (state = initialState, action: any):InitialStateType => {
+export const rootReducer = (state = initialState, action: ActionsTypes):InitialStateType => {
   switch (action.type) {
     case CHANGE_RADIO_SELECT:
       return { ...state, radioSelect: action.payload };

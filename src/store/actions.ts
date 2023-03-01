@@ -21,6 +21,9 @@ type ChangeFilmsArrayActionType = {
   payload: Array<FilmsType>
 }
 
+export type ActionsTypes = ChangeRadioSelectActionType | ChangeInputSearchActionType 
+| ChangeFilmsArrayActionType
+
 export function changeRadioSelect(radioSelect: string): ChangeRadioSelectActionType {
   return {
     type: CHANGE_RADIO_SELECT,
