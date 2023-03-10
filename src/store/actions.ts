@@ -1,9 +1,3 @@
-import {
-  CHANGE_RADIO_SELECT,
-  CHANGE_INPUT_SEARCH,
-  CHANGE_FILMS_ARRAY,
-} from './types';
-
 import {FilmsType} from './reducers'
 import { InferActionTypes } from '..';
 
@@ -14,23 +8,23 @@ export const actions = {
 
   changeRadioSelect : (radioSelect: string) => {
     return {
-      type: CHANGE_RADIO_SELECT,
+      type: 'CHANGE_RADIO_SELECT',
       payload: radioSelect,
-    };
+    } as const;
   },
 
   changeInputSearch : (searchText: string) => {
     return {
-      type: CHANGE_INPUT_SEARCH,
+      type: 'CHANGE_INPUT_SEARCH',
       payload: searchText,
-    };
+    } as const;
   },
 
   changeFilmsArray : (films: Array<FilmsType>) => {
     return {
-      type: CHANGE_FILMS_ARRAY,
+      type: 'CHANGE_FILMS_ARRAY',
       payload: films,
-    };
+    } as const;
   },
 
 
