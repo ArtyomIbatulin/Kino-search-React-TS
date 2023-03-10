@@ -5,42 +5,33 @@ import {
 } from './types';
 
 import {FilmsType} from './reducers'
+import { InferActionTypes } from '..';
 
-type ChangeRadioSelectActionType = {
-  type: typeof CHANGE_RADIO_SELECT,
-  payload: string
-}
 
-type ChangeInputSearchActionType = {
-  type: typeof CHANGE_INPUT_SEARCH,
-  payload: string
-}
+export type ActionsTypes = InferActionTypes<typeof actions>
 
-type ChangeFilmsArrayActionType = {
-  type: typeof CHANGE_FILMS_ARRAY,
-  payload: Array<FilmsType>
-}
+export const actions = {
 
-export type ActionsTypes = ChangeRadioSelectActionType | ChangeInputSearchActionType 
-| ChangeFilmsArrayActionType
+  changeRadioSelect : (radioSelect: string) => {
+    return {
+      type: CHANGE_RADIO_SELECT,
+      payload: radioSelect,
+    };
+  },
 
-export function changeRadioSelect(radioSelect: string): ChangeRadioSelectActionType {
-  return {
-    type: CHANGE_RADIO_SELECT,
-    payload: radioSelect,
-  };
-}
+  changeInputSearch : (searchText: string) => {
+    return {
+      type: CHANGE_INPUT_SEARCH,
+      payload: searchText,
+    };
+  },
 
-export function changeInputSearch(searchText: string): ChangeInputSearchActionType {
-  return {
-    type: CHANGE_INPUT_SEARCH,
-    payload: searchText,
-  };
-}
+  changeFilmsArray : (films: Array<FilmsType>) => {
+    return {
+      type: CHANGE_FILMS_ARRAY,
+      payload: films,
+    };
+  },
 
-export function changeFilmsArray(films: Array<FilmsType>): ChangeFilmsArrayActionType {
-  return {
-    type: CHANGE_FILMS_ARRAY,
-    payload: films,
-  };
+
 }
