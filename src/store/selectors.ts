@@ -23,12 +23,12 @@ export const filteredData = createSelector(
     };
   
     return films
-      .filter((item) =>
+      ?.filter((item) =>
         radioSelect === 'all' ? true : item.genre === genreSelector[radioSelect as keyof GenreSelector])
       .filter(
         (item) =>
-          item.name.toLowerCase().includes(searchText.toLowerCase()) ||
-          item.director.toLowerCase().includes(searchText.toLowerCase())
+          item.name?.toLowerCase().includes(searchText.toLowerCase()) ||
+          item.director?.toLowerCase().includes(searchText.toLowerCase())
       );
 
   }
