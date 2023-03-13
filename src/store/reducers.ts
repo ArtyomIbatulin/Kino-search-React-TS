@@ -14,7 +14,7 @@ export type FilmsType = {
 }
 
 export type InitialStateType = {
-  films: Array<FilmsType> | null,
+  films: Array<FilmsType>,
   radioSelect: string ,
   searchText: string ,
 }

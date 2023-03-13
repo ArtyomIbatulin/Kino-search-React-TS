@@ -23,7 +23,7 @@ export const filteredData = createSelector(
     };
   
     return films
-      ?.filter((item) =>
+      .filter((item) =>
         radioSelect === 'all' ? true : item.genre === genreSelector[radioSelect as keyof GenreSelector])
       .filter(
         (item) =>
@@ -37,3 +37,5 @@ export const filteredData = createSelector(
 // if babel error - films? --> films && films
 // type useSelector, useDispatch
 // createNewCard - автоопределение через typeof, films, className
+// rating in createNewCard
+// nullable type ts

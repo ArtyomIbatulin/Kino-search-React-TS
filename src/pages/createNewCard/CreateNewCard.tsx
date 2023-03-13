@@ -16,7 +16,8 @@ type InitialValues = {
   director: string,
   desc: string,
   description: string,
-  stars: string,
+  stars: number,
+  rating: string 
 }
 
 
@@ -27,7 +28,8 @@ const initialValues: InitialValues = {
   director: '',
   desc: '',
   description: '',
-  stars: '',
+  stars: 0,
+  rating: '0',
 };
 
 
