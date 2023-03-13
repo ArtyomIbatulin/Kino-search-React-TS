@@ -1,14 +1,26 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import styles from './CreateNewCard.module.scss';
-import { changeFilmsArray } from '../../store/actions';
+import { actions } from '../../store/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MyTextInput from './components/myTextInput/MyTextInput';
 import MySelect from './components/mySelect/MySelect';
 import validation from './validation';
+import { AppStateType } from '../..';
 
-const initialValues = {
+type InitialValues = {
+  poster: string,
+  name: string,
+  genre: string,
+  director: string,
+  desc: string,
+  description: string,
+  stars: string,
+}
+
+
+const initialValues: InitialValues = {
   poster: '',
   name: '',
   genre: '',
@@ -18,9 +30,11 @@ const initialValues = {
   stars: '',
 };
 
+
+
 const CreateNewCard = () => {
   const dispatch = useDispatch();
-  const films = useSelector((state) => state.films);
+  const films = useSelector((state: AppStateType) => state.films);
 
   return (
     <main className={styles.createNewCard}>
@@ -29,7 +43,7 @@ const CreateNewCard = () => {
         initialValues={initialValues}
         validationSchema={validation}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          dispatch(changeFilmsArray([...films, values]));
+          dispatch(actions.changeFilmsArray([...films, values]));
           setSubmitting(false);
           resetForm();
           alert('Карта создана');

@@ -36,4 +36,4 @@ export const filteredData = createSelector(
 
 // if babel error - films? --> films && films
 // type useSelector, useDispatch
-// автоопределение через typeof 
+// createNewCard - автоопределение через typeof, films, className
