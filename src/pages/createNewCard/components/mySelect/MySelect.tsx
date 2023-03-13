@@ -3,12 +3,12 @@ import { useField } from 'formik';
 import styles from '../../CreateNewCard.module.scss';
 
 type PropsType = {
-  label: string,
-  id: string,
+  label?: string,
+  id?: string,
   name: string,
 }
 
-const MySelect: React.FC<PropsType> = ({ label, ...props }) => {
+const MySelect: React.FC<PropsType & {className: string}> = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
   return (
