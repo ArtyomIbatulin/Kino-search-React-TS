@@ -2,7 +2,13 @@ import React from 'react';
 import styles from '../../CreateNewCard.module.scss';
 import { useField } from 'formik';
 
-const MyTextInput = ({ label, ...props }) => {
+type PropsType = {
+  label?: string,
+  id?: string
+  name: string
+}
+
+const MyTextInput: React.FC<PropsType> = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
   return (

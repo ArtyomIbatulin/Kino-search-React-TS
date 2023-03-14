@@ -38,3 +38,4 @@ export const filteredData = createSelector(
 // type useSelector, useDispatch
 // автоопределение через typeof 
 // nullable type ts
+// unit tests
