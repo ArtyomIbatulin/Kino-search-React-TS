@@ -2,7 +2,9 @@ import React, {FC} from 'react';
 import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 
-const Footer: FC = () => {
+type PropsType = {}
+
+const Footer: FC<PropsType> = () => {
   return (
     <footer className={styles.footer}>
       Kino Poisk 2021
