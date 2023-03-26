@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { filteredData } from "../../store/selectors";
 import StarRatingComponent from "react-star-rating-component";
 import { AppStateType } from "../../index";
-import { boolean, number } from "yup";
 
 export type CardType = {
   poster : string,
