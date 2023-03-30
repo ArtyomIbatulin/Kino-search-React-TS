@@ -3,10 +3,17 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Gallery from "../Gallery/Gallery";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
+type PropsType = {
+}
+
+
+
+export default class App extends Component<PropsType>{
+  constructor(props: PropsType) {
+    super(props)
   }
+
+
 
   render() {
     return (

@@ -14,10 +14,10 @@ export type CardType = {
   desc: string,
   description: string,
   stars : number
-}
+} 
 
 type PropsType = {
-  filteredData : Array<CardType>
+  filteredData? : Array<CardType>
 }
 
 const Gallery: FC<PropsType>  = (props) => (
@@ -25,7 +25,7 @@ const Gallery: FC<PropsType>  = (props) => (
     <section>
       <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
       <ul className={styles.ul}>
-        {props.filteredData.map((item, i) => (
+        {props.filteredData?.map((item, i) => (
           <Card
             key={i}
             item={item}
@@ -57,3 +57,5 @@ const mapStatetoProps = (state: AppStateType) => {
 };
 
 export default connect(mapStatetoProps, null)(Gallery);
+
+// type connect

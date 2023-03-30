@@ -4,7 +4,7 @@ import Search from './Search/Search';
 import styles from './Header.module.scss';
 
 type PropsType = {
-  checkCords: () => void
+  checkCords?: () => void
 }
 
 type StateType = {
@@ -53,3 +53,5 @@ class Header extends Component<PropsType, StateType> {
 }
 
 export default Header;
+
+// fix pageYOffset
