@@ -4,10 +4,9 @@ import { connect, ConnectedProps  } from 'react-redux';
 import { actions } from '../../../store/actions';
 import { InitialStateType } from '../../../store/reducers';
 
-
 interface PropsType extends PropsFromRedux {
+ 
 }
-
 
 const Filter: FC<PropsType> = ({ changeRadio }) => {
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -80,4 +79,4 @@ type PropsFromRedux = ConnectedProps<typeof connector>
 
 export default connector(Filter)
 
-// (dispatch: any)
+// (dispatch: any) 
