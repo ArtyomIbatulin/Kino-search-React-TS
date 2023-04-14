@@ -7,6 +7,7 @@ import StarRatingComponent from "react-star-rating-component";
 import { AppStateType } from "../../index";
 
 export type CardType = {
+  item: {},
   poster : string,
   name : string,
   genre : string,
@@ -59,3 +60,4 @@ const mapStatetoProps = (state: AppStateType) => {
 export default connect(mapStatetoProps, null)(Gallery);
 
 // type connect
+// item: {} ???

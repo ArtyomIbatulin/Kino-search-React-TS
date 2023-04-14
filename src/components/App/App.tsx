@@ -25,3 +25,5 @@ export default class App extends Component<PropsType>{
     );
   }
 }
+
+// fix Useless constructor 

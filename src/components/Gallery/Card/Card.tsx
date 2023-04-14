@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styles from './Card.module.scss';
+import { CardType } from '../Gallery';
 
-const Card = (props) => {
-  const { poster, name, genre, director, desc, description } = props;
+const Card: FC<CardType> = (props) => {
+  const {  poster, name, genre, director, desc, description } = props;
 
   return (
     <li className={styles.card}>
       <div className={styles.divImg}>
-        <img src={poster} className={styles.img} />
+        <img src={poster} alt={name} className={styles.img} />
       </div>
       <p className={styles.pName}>{name}</p>
       <p>{genre}</p>

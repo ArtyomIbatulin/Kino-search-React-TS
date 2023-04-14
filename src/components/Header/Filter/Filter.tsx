@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import styles from './Filter.module.scss';
 import { connect } from 'react-redux';
-import { changeRadioSelect } from '../../../store/actions';
+import { actions } from '../../../store/actions';
 
 const Filter = ({ changeRadio }) => {
-  const handleRadioChange = (event) => {
+  const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     changeRadio(event.target.value);
   };
 
@@ -61,7 +61,7 @@ const Filter = ({ changeRadio }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  changeRadio: (value) => dispatch(changeRadioSelect(value)),
+  changeRadio: (value) => dispatch(actions.changeRadioSelect(value)),
 });
 
 export default connect(null, mapDispatchToProps)(Filter);
