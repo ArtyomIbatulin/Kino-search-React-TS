@@ -20,12 +20,12 @@ class Header extends Component<PropsType, StateType> {
   }
 
   checkCords = () => {
-    if (pageYOffset >= 1 && this.state.scroll === false) {
+    if (window.pageYOffset >= 1 && this.state.scroll === false) {
       this.setState({
         scroll: true,
       });
     }
-    if (pageYOffset < 1 && this.state.scroll === true) {
+    if (window.pageYOffset < 1 && this.state.scroll === true) {
       this.setState({
         scroll: false,
       });
@@ -53,5 +53,3 @@ class Header extends Component<PropsType, StateType> {
 }
 
 export default Header;
-
-// fix pageYOffset
