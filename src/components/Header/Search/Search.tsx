@@ -1,8 +1,9 @@
 import React, { ChangeEvent, FC } from 'react';
 import styles from './Search.module.scss';
 import { ConnectedProps, connect } from 'react-redux';
-import { actions } from '../../../store/actions';
+import { ActionsTypes, actions } from '../../../store/actions';
 import { InitialStateType } from '../../../store/reducers';
+import { Dispatch } from 'redux';
 
 interface PropsType extends PropsFromRedux {
  
@@ -29,7 +30,7 @@ const mapStateToProps = (state: InitialStateType) => ({
  
 })
 
-const mapDispatchToProps = (dispatch:any) => ({
+const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
   changeInput: (value:string) => dispatch(actions.changeInputSearch(value)),
 });
 
