@@ -1,9 +1,15 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import styles from './Filter.module.scss';
-import { connect } from 'react-redux';
+import { connect, ConnectedProps  } from 'react-redux';
 import { actions } from '../../../store/actions';
+import { InitialStateType } from '../../../store/reducers';
 
-const Filter = ({ changeRadio }) => {
+
+interface PropsType extends PropsFromRedux {
+}
+
+
+const Filter: FC<PropsType> = ({ changeRadio }) => {
   const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
     changeRadio(event.target.value);
   };
@@ -60,8 +66,18 @@ const Filter = ({ changeRadio }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  changeRadio: (value) => dispatch(actions.changeRadioSelect(value)),
+const mapStateToProps = (state: InitialStateType) => ({
+ 
+})
+
+const mapDispatchToProps = (dispatch: any) => ({
+  changeRadio: (value: string) => dispatch(actions.changeRadioSelect(value)),
 });
 
-export default connect(null, mapDispatchToProps)(Filter);
+const connector = connect(mapStateToProps, mapDispatchToProps)
+
+type PropsFromRedux = ConnectedProps<typeof connector>
+
+export default connector(Filter)
+
+// (dispatch: any)
