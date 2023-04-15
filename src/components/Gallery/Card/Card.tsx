@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 import styles from './Card.module.scss';
-import { CardType } from '../Gallery';
+import { FilmsType } from '../../../store/reducers';
 
-const Card: FC<CardType> = (props) => {
+
+
+const Card: FC<FilmsType> = (props) => {
   const {  poster, name, genre, director, desc, description } = props;
 
   return (
