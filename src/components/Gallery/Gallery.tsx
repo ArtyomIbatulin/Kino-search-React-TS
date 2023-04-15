@@ -1,24 +1,17 @@
 import React, {FC} from "react";
 import Card from "./Card/Card";
 import styles from "./Gallery.module.scss";
-import { connect } from "react-redux";
+import { ConnectedProps, connect } from "react-redux";
 import { filteredData } from "../../store/selectors";
 import StarRatingComponent from "react-star-rating-component";
 import { AppStateType } from "../../index";
+import { Dispatch } from "redux";
+import { ActionsTypes } from "../../store/actions";
+import { FilmsType } from "../../store/reducers";
 
-export type CardType = {
-  item: {},
-  poster : string,
-  name : string,
-  genre : string,
-  director : string,
-  desc: string,
-  description: string,
-  stars : number
-} 
 
-type PropsType = {
-  filteredData? : Array<CardType>
+interface PropsType extends PropsFromRedux {
+  filteredData : Array<FilmsType>
 }
 
 const Gallery: FC<PropsType>  = (props) => (
@@ -26,10 +19,9 @@ const Gallery: FC<PropsType>  = (props) => (
     <section>
       <h1 className={styles.h1}>Найдите свои любимые фильмы</h1>
       <ul className={styles.ul}>
-        {props.filteredData?.map((item, i) => (
+        {props.filteredData.map((item, i) => (
           <Card
             key={i}
-            item={item}
             poster={item.poster}
             name={item.name}
             genre={item.genre}
@@ -51,13 +43,18 @@ const Gallery: FC<PropsType>  = (props) => (
   </main>
 );
 
-const mapStatetoProps = (state: AppStateType) => {
+const mapStateToProps = (state: AppStateType) => {
   return {
     filteredData: filteredData(state),
   };
 };
 
-export default connect(mapStatetoProps, null)(Gallery);
+const mapDispatchToProps = (dispatch: Dispatch<ActionsTypes>) => ({
+});
 
-// type connect
-// item: {} ???
+
+const connector = connect(mapStateToProps, mapDispatchToProps)
+
+type PropsFromRedux = ConnectedProps<typeof connector>
+
+export default connector(Gallery)
