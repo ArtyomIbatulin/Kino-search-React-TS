@@ -2,8 +2,8 @@ import React, { ChangeEvent, FC } from 'react';
 import styles from './Search.module.scss';
 import { ConnectedProps, connect } from 'react-redux';
 import { ActionsTypes, actions } from '../../../store/actions';
-import { InitialStateType } from '../../../store/reducers';
 import { Dispatch } from 'redux';
+import { AppStateType } from '../../..';
 
 interface PropsType extends PropsFromRedux {
  
@@ -26,7 +26,7 @@ const Search: FC<PropsType> = ({ changeInput }) => {
 };
 
 
-const mapStateToProps = (state: InitialStateType) => ({
+const mapStateToProps = (state: AppStateType) => ({
  
 })
 

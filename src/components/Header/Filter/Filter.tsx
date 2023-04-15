@@ -2,8 +2,8 @@ import React, { ChangeEvent, FC } from 'react';
 import styles from './Filter.module.scss';
 import { connect, ConnectedProps  } from 'react-redux';
 import { ActionsTypes, actions } from '../../../store/actions';
-import { InitialStateType } from '../../../store/reducers';
 import { Dispatch } from 'redux';
+import { AppStateType } from '../../..';
 
 interface PropsType extends PropsFromRedux {
  
@@ -66,7 +66,7 @@ const Filter: FC<PropsType> = ({ changeRadio }) => {
   );
 };
 
-const mapStateToProps = (state: InitialStateType) => ({
+const mapStateToProps = (state: AppStateType) => ({
  
 })
 
