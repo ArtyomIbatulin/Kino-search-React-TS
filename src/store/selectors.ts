@@ -34,9 +34,9 @@ export const filteredData = createSelector(
   }
 );
 
-// if babel error - films? --> films && films
 // type useSelector, useDispatch (14)
 // автоопределение через typeof (13, 6)
 // nullable type ts
-// type connect (MSP, DSP) (14)
 // AppStateType or InitialStateType (find in v)
+// CreateNewCard -> dispatch
+// tests
