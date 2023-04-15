@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Formik, Form } from 'formik';
 import styles from './CreateNewCard.module.scss';
 import { actions } from '../../store/actions';
@@ -9,6 +9,10 @@ import MySelect from './components/mySelect/MySelect';
 import validation from './validation';
 import { AppStateType } from '../..';
 
+type PropsType = {
+
+}
+
 type InitialValues = {
   poster: string,
   name: string,
@@ -17,7 +21,6 @@ type InitialValues = {
   desc: string,
   description: string,
   stars: number,
-  rating: string 
 }
 
 
@@ -29,12 +32,11 @@ const initialValues: InitialValues = {
   desc: '',
   description: '',
   stars: 0,
-  rating: '0',
 };
 
 
 
-const CreateNewCard = () => {
+const CreateNewCard: FC<PropsType> = () => {
   const dispatch = useDispatch();
   const films = useSelector((state: AppStateType) => state.films);
 
@@ -56,7 +58,7 @@ const CreateNewCard = () => {
           <MyTextInput label="Название" name="name" type="text" />
           <MyTextInput label="Режиссер" name="director" type="text" />
           <MyTextInput label="Описание" name="desc" type="text" />
-          <MyTextInput label="Ссылка на фильм" name="description" />
+          <MyTextInput label="Ссылка на фильм" name="description" type="text" />
           <MyTextInput label="Рейтинг" name="stars" type="number" />
 
           <MySelect className={styles.select} name="genre">

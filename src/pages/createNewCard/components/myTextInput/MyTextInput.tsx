@@ -4,8 +4,9 @@ import { useField } from 'formik';
 
 type PropsType = {
   label?: string,
-  id?: string
-  name: string
+  id?: string,
+  name: string,
+  type: string
 }
 
 const MyTextInput: React.FC<PropsType> = ({ label, ...props }) => {
