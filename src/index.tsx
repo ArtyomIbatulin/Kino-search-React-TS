@@ -6,11 +6,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { rootReducer } from './store/reducers';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from './components/App/App.js';
 import SignIn from './pages/signIn/SignIn';
 import SignUp from './pages/signUp/SignUp';
 import CreateNewCard from './pages/createNewCard/CreateNewCard';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import App from './components/App/App';
 
 const store = createStore(
   rootReducer,
