@@ -9,6 +9,7 @@ type PropsType = {
 
 
 export default class App extends Component<PropsType>{
+  // eslint-disable-next-line 
   constructor(props: PropsType) {
     super(props)
   }
@@ -25,5 +26,3 @@ export default class App extends Component<PropsType>{
     );
   }
 }
-
-// fix Useless constructor 
