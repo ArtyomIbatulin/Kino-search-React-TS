@@ -12,17 +12,19 @@ export type FilmsType = {
   stars: number
 }
 
-export type InitialStateType = {
-  films: Array<FilmsType>,
-  radioSelect: string ,
-  searchText: string ,
-}
+// export type InitialStateType = {
+//   films: Array<FilmsType>,
+//   radioSelect: string ,
+//   searchText: string ,
+// }
 
-const initialState: InitialStateType = {
+const initialState = {
   films: films,
   radioSelect: 'all',
   searchText: '',
 };
+
+type InitialStateType =  typeof initialState
 
 export const rootReducer = (state = initialState, action: ActionsTypes):InitialStateType => {
   switch (action.type) {

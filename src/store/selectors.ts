@@ -35,8 +35,6 @@ export const filteredData = createSelector(
 );
 
 // type useSelector, useDispatch (14)
-// автоопределение через typeof (13, 6)
-// nullable type ts
 // AppStateType or InitialStateType (find in v)
-// CreateNewCard -> dispatch
-// tests
+// CreateNewCard -> dispatch 
+// nullable type ts

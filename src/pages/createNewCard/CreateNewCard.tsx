@@ -35,7 +35,6 @@ const initialValues: InitialValues = {
 };
 
 
-
 const CreateNewCard: FC<PropsType> = () => {
   const dispatch = useDispatch();
   const films = useSelector((state: AppStateType) => state.films);
