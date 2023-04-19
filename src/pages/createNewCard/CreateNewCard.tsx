@@ -82,6 +82,3 @@ const CreateNewCard: FC<PropsType> = () => {
 };
 
 export default CreateNewCard;
-
-// https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/6f631486-e947-487d-94d6-41c2b5a8f5a0/300x450
-// https://www.kinopoisk.ru/film/841700/

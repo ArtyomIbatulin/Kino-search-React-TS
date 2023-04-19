@@ -33,8 +33,3 @@ export const filteredData = createSelector(
 
   }
 );
-
-// type useSelector, useDispatch (14)
-// AppStateType or InitialStateType (find in v)
-// CreateNewCard -> dispatch 
-// nullable type ts

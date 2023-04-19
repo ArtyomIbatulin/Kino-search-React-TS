@@ -19,7 +19,7 @@ export type FilmsType = {
 // }
 
 const initialState = {
-  films: films,
+  films: films as Array<FilmsType>,
   radioSelect: 'all',
   searchText: '',
 };
