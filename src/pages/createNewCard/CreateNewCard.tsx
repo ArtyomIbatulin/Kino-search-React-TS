@@ -74,7 +74,7 @@ const CreateNewCard: FC<PropsType> = () => {
           </div>
         </Form>
       </Formik>
-      <Link to="/" className={styles.link}>
+      <Link to="/Kino-search-React-TS" className={styles.link}>
         Вернуться на главную
       </Link>
     </main>

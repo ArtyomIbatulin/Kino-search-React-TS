@@ -26,10 +26,10 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={App} />
-          <Route path="/sign-in" component={SignIn} />
-          <Route path="/sign-up" component={SignUp} />
-          <Route path="/create-new-card" component={CreateNewCard} />
+          <Route exact path="/Kino-search-React-TS" component={App} />
+          <Route path="/Kino-search-React-TS/sign-in" component={SignIn} />
+          <Route path="/Kino-search-React-TS/sign-up" component={SignUp} />
+          <Route path="/Kino-search-React-TS/create-new-card" component={CreateNewCard} />
         </Switch>
       </BrowserRouter>
     </Provider>
