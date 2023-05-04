@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Kino-search-React-TS/static/css/main.4cb8c38f.chunk.css",
-    "main.js": "/Kino-search-React-TS/static/js/main.ec29275c.chunk.js",
-    "main.js.map": "/Kino-search-React-TS/static/js/main.ec29275c.chunk.js.map",
+    "main.js": "/Kino-search-React-TS/static/js/main.8799303b.chunk.js",
+    "main.js.map": "/Kino-search-React-TS/static/js/main.8799303b.chunk.js.map",
     "runtime-main.js": "/Kino-search-React-TS/static/js/runtime-main.d768ab46.js",
     "runtime-main.js.map": "/Kino-search-React-TS/static/js/runtime-main.d768ab46.js.map",
     "static/js/2.b04d272e.chunk.js": "/Kino-search-React-TS/static/js/2.b04d272e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d768ab46.js",
     "static/js/2.b04d272e.chunk.js",
     "static/css/main.4cb8c38f.chunk.css",
-    "static/js/main.ec29275c.chunk.js"
+    "static/js/main.8799303b.chunk.js"
   ]
 }
